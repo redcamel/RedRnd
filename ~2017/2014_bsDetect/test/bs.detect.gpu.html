@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>detect-test</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="viewport"
+          content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi"/>
+    <style>
+        div { font-size: 11px }
+    </style>
+</head>
+<body>
+<div id="stage"></div>
+<div id="result"></div>
+<div id="test"></div>
+<script src="http://projectbs.github.io/bsJS/bsjs.0.4.js"></script>
+<script src="../detect.0.4.js"></script>
+<script src="http://projectbs.github.io/bsJSTest/bsTest.js"></script>
+<script src="http://projectbs.github.io/bsJSTest/0.3/printer.js"></script>
+<script>
+    bs(function(){
+        var W=window, D=bs.detectWindow(W), t0, strs=""
+        D=bs.detectDOM(W,D);
+        var enable=D['glEnabled']
+        var check=enable ? 'glEnabled,glAlpha,glAntialias,glDepth,glPremultipliedAlpha,glPreserveDrawingBuffer,glStencil,glVERTEX_HIGH_FLOAT,glFRAGMENT_HIGH_FLOAT'.split(',') : ['glEnabled']
+        if(enable){
+            for(var k in D) if(k.substr(0,2) == 'gl') strs+=k+" <span style='color:green'>"+D[k]+'</span><br>'
+            bsTest.tear('Vendor - '+D.glVendor+'<br>Version - '+D.glVersion+'<br>ShadingLanguageVersion - '+D.glShadingLanguageVersion+'<br>Renderer - '+D.glRenderer+'<br><br>'+strs,function(){});
+            bsTest.tear('trueCheck',function(){});
+        }
+        for(var i=0; i < check.length; i++){
+            bsTest('trueCheck '+(t0=check[i])+' = '+D[t0],function(){
+                return (D[t0] == 1 || D[t0] == 0) ? 'pass' : 'fail'
+            },'pass')
+        }
+        function numberTest($title,$list){
+            var t1=$list, t2
+            bsTest.tear($title,function(){});
+            for(var i=0; i < t1.length; i++){
+                t2=D[t0]
+                bsTest((t0=t1[i])+' = '+t2,function(){
+                    return isNumber(t2) ? 'pass' : 'fail'
+                },'pass',function(){
+                    return isNull(t2) ? 'fail' : 'pass'
+                },'pass',function(){
+                    return isNaturalNumber(t2) ? 'pass' : 'fail'
+                },'pass',function(){
+                    return isNaN(t2) ? 'fail' : 'pass'
+                },'pass',function(){
+                    return isInt(t2) ? 'pass' : 'fail'
+                },'pass')
+            }
+        }
+        function isInt($t){
+            return ($t == parseInt($t)) ? 1 : 0
+        }
+
+        function isNull($t){
+            return ($t == null) ? 1 : 0
+        }
+
+        function isNumber($t){
+            return (typeof($t) == 'number') ? 1 : 0
+        }
+
+        function isNaturalNumber($t){
+            return ($t >= 0) ? 1 : 0
+        }
+
+        if(enable){
+            numberTest('numberCheck -Vertex & Fragment','glMaxVertexAttribs,glMaxVaryingVectors,glMaxVertexUniformVectors,glMaxFragmentUniformVectors'.split(','))
+            numberTest('ImageUnit & Texture','glMaxVertexTextureImageUnits,glMaxTextureImageUnits,glMaxTextureSize,glMaxCubeMapTextureSize,glMaxCombinedTextureImageUnits'.split(','))
+            numberTest('etc','glMaxRenderbufferSize,glRedBits,glGreenBits,glBlueBits,glAlphaBits,glDepthBits,glStencilBits'.split(','))
+            bsTest.tear('TODO - 실제 실행테스트 예정 ',function(){});
+        }
+    });
+</script>
+</body>
+</html>
