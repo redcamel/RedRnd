@@ -1,0 +1,146 @@
+[
+  {
+    "title": "createArrayBufferInfo",
+    "code": "FUNCTION",
+    "description": "- TODO"
+  },
+  {
+    "title": "createGeometryInfo",
+    "code": "FUNCTION",
+    "description": "- TODO"
+  },
+  {
+    "title": "createIndexBufferInfo",
+    "code": "FUNCTION",
+    "description": "- TODO"
+  },
+  {
+    "title": "createMaterialInfo",
+    "code": "FUNCTION",
+    "description": "\n- 재질정보생성\n"
+  },
+  {
+    "title": "createMeshInfo",
+    "code": "FUNCTION",
+    "description": "- TODO"
+  },
+  {
+    "title": "createProgram",
+    "code": "FUNCTION",
+    "description": "- TODO"
+  },
+  {
+    "title": "createShaderInfo",
+    "code": "FUNCTION",
+    "description": "\n- RedGL 쉐이더 생성기.\n- 유일키만 지원하며 키 중복일경우 기존 캐싱된 쉐이더정보를 반환함.\n- 단 프레그먼트/버텍스의 키는 따로 관리함.\n",
+    "params": {
+      "key": [
+        {
+          "type": "String"
+        },
+        "- 등록될 키명"
+      ],
+      "type": [
+        {
+          "type": "String"
+        },
+        "- 버텍스 쉐이더(RedShaderInfo.VERTEX_SHADER)",
+        "- 프레그먼트 쉐이더(RedShaderInfo.FRAGMENT_SHADER)"
+      ],
+      "source": [
+        {
+          "type": "String"
+        },
+        "- 생성할 쉐이더 소스문자열"
+      ]
+    },
+    "example": "\nvar test;\ntest = RedGL(Canvas Element)\n// basic이라는 이름으로 버텍스 쉐이더를 만든다. \ntest.createShaderInfo('basic', RedShaderInfo.VERTEX_SHADER, 쉐이더소스)\n",
+    "return": "RedShaderInfo Instance"
+  },
+  {
+    "title": "getArrayBufferInfo",
+    "code": "FUNCTION",
+    "description": "- TODO"
+  },
+  {
+    "title": "getGeometryInfo",
+    "code": "FUNCTION",
+    "description": "- TODO"
+  },
+  {
+    "title": "getIndexBufferInfo",
+    "code": "FUNCTION",
+    "description": "- TODO"
+  },
+  {
+    "title": "getMeshInfo",
+    "code": "FUNCTION",
+    "description": "- TODO"
+  },
+  {
+    "title": "getProgramInfo",
+    "code": "FUNCTION",
+    "description": "- TODO"
+  },
+  {
+    "title": "getShaderInfo",
+    "code": "FUNCTION",
+    "description": "\n- 정의된 쉐이더를 조회\n"
+  },
+  {
+    "title": "getSourceFromScript",
+    "code": "FUNCTION",
+    "description": "\nscript 소스를 가져옴\n",
+    "params": {
+      "id": [
+        {
+          "type": "String"
+        },
+        "아이디"
+      ]
+    },
+    "example": "\nRedShaderInfo.getSourceFromScript(id)\n",
+    "return": "String"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedGL",
+    "description": "\n- RedGL 인스턴스 생성자\n",
+    "params": {
+      "canvas": [
+        {
+          "type": "Canvas Element"
+        }
+      ],
+      "fullMode": [
+        {
+          "type": "Boolean"
+        },
+        "- 기본값 false",
+        "- true일경우 윈도우사이즈가 변할때마다 추적함"
+      ]
+    },
+    "example": "\nRedGL(document.getElementById('test'))\n",
+    "return": "RedGL Instance"
+  },
+  {
+    "title": "setSize",
+    "code": "FUNCTION",
+    "description": "\nwengl 캔버스의 크기를 지정함.\n인자를 입력하지 않으면 화면상의 풀사이즈로 적용됨\n",
+    "params": {
+      "width": [
+        {
+          "type": "Number"
+        },
+        "가로값"
+      ],
+      "height": [
+        {
+          "type": "Number"
+        },
+        "세로값"
+      ]
+    },
+    "example": "\n인스턴스.setSize(600,600)\n"
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "title": "color",
+    "description": "\n    - 라이트 컬러\n    - 기본값 : new Float32Array([1, 1, 1, 1])\n",
+    "code": "PROPERTY",
+    "example": "인스턴스.color",
+    "return": "Float32(vec4)"
+  },
+  {
+    "title": "direction",
+    "description": "\n - 라이트 디렉션\n",
+    "code": "PROPERTY",
+    "example": "인스턴스.color",
+    "return": "Float32(vec3)"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedDirectionalLightInfo",
+    "description": "\n    - RedDirectionalLightInfo 생성\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "RedGL Instance"
+        },
+        "- redGL 인스턴스"
+      ]
+    },
+    "example": "\n    testGL.createDirectionalLight()\n",
+    "return": "RedDirectionalLightInfo Instance"
+  }
+]

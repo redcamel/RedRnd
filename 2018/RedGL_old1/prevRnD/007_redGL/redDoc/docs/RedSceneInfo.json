@@ -1,0 +1,59 @@
+[
+  {
+    "title": "addLight",
+    "description": "라이트 설정",
+    "code": "FUNCTION",
+    "example": "인스턴스.addLight"
+  },
+  {
+    "title": "camera",
+    "description": "씬이 가지고있는 카메라",
+    "example": "인스턴스.camera",
+    "return": "RedBaseCamera"
+  },
+  {
+    "title": "children",
+    "description": "씬이 물고있는 Mesh리스트들",
+    "example": "인스턴스.children",
+    "return": "Array"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedSceneInfo",
+    "description": "\n    - RedGL에서 사용할 Scene정보를 생성\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "RedGL Instance"
+        },
+        "- redGL 인스턴스"
+      ],
+      "key": [
+        {
+          "type": "String"
+        },
+        "- 존재하는 키일경우 에러."
+      ],
+      "camera": [
+        {
+          "type": "RedBaseCamera"
+        },
+        "- 사용할 카메라 객체등록"
+      ]
+    },
+    "example": "\n    var test;\n    test = RedGL(Canvas Element)\n    // firstScene 키로 Scene생성\n    RedSceneInfo(test,'firstScene')\n",
+    "return": "RedSceneInfo Instance"
+  },
+  {
+    "title": "setGrid",
+    "description": "그리드 설정",
+    "code": "FUNCTION",
+    "example": "인스턴스.setGrid"
+  },
+  {
+    "title": "setSkyBox",
+    "description": "스카이박스 설정",
+    "code": "FUNCTION",
+    "example": "인스턴스.setSkyBox"
+  }
+]

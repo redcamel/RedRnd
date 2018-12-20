@@ -1,0 +1,48 @@
+[
+  {
+    "title": "geometryInfo",
+    "description": "\n    - 메쉬가 소유하고있는 geometryInfo\n",
+    "example": "인스턴스.geometryInfo",
+    "return": "RedGeometryInfo"
+  },
+  {
+    "title": "materialInfo",
+    "description": "\n    - 메쉬가 소유하고있는 materialInfo\n",
+    "example": "인스턴스.materialInfo",
+    "return": "RedMaterialInfo"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedMeshInfo",
+    "description": "\n    <h2>RedMeshBaseInfo 상속객체</h2>\n    - RedGL에서 사용할 재질정보를 정의\n    - 타입키에 해당하는 정의가 존재하지않을경우 에러\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "RedGL Instance"
+        },
+        "- redGL 인스턴스"
+      ],
+      "key": [
+        {
+          "type": "String"
+        },
+        "- 고유키",
+        "- <span style=\"color:red\"><b>입력하지않으면 그냥 UUID를 생성해버릴까..</b></span>"
+      ],
+      "geometryInfo": [
+        {
+          "type": "RedGeometryInfo"
+        },
+        "- 지오메트리정보"
+      ],
+      "materialInfo": [
+        {
+          "type": "RedMaterialInfo"
+        },
+        "- 재질정보"
+      ]
+    },
+    "example": "\n    var test;\n    test = RedGL(Canvas Element)\n    RedMeshInfo(test, 'firstMesh',geometryInfo, materialInfo)\n",
+    "return": "RedMeshInfo Instance"
+  }
+]

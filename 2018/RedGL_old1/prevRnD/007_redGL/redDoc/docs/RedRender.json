@@ -1,0 +1,37 @@
+[
+  {
+    "constructorYn": true,
+    "title": "RedMeshInfo",
+    "description": "\n   - 렌더러\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "RedGL Instance"
+        },
+        "- redGL 인스턴스"
+      ],
+      "redScene": [
+        {
+          "type": "RedSceneInfo"
+        },
+        "- RedSceneInfo을 일단 최초 렌더 그룹으로 본다.",
+        "- <span style=\"color:red\"><b>\n           - 월드는 과연필요한가 -_-?\n           - 씬이 카메라는 먹으면 어짜피 같은효과가 아닌가?\n         </b></span>\n        "
+      ],
+      "callback": [
+        {
+          "type": "Function"
+        },
+        "- 루프시 사전에 돌릴 콜백등록"
+      ]
+    },
+    "example": "\n    var renderer = RedRender(RedGL Instance, RedSceneInfo Instance, function (time) {\n        // 렌더링시 사전호출될 콜백\n    })\n    renderer.start()\n",
+    "return": "RedRender Instance"
+  },
+  {
+    "title": "RedMeshInfo",
+    "code": "PROPERTY",
+    "description": "\n    - 렌더러 시작 매서드\n",
+    "example": "\n    var renderer = RedRender(RedGL Instance, RedSceneInfo Instance, function (time) {\n        // 렌더링시 사전호출될 콜백\n    })\n    renderer.start()\n",
+    "return": "RedRender Instance"
+  }
+]

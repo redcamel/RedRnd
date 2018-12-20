@@ -1,0 +1,22 @@
+"use strict";
+RedGL.obj('CONST',{
+	REAL_CLASS:Symbol.for('REAL_CLASS'),
+	STYLE:Symbol.for('STYLE'),
+	CVS:Symbol.for('CVS'),
+	CTX:Symbol.for('CTX'),
+	PROGRAM_LIST:Symbol.for('PROGRAM_LIST'),
+	GEOMETRY_LIST:Symbol.for('GEOMETRY_LIST'),
+	TEXTURE_LIST:Symbol.for('TEXTURE_LIST'),
+	VBO:Symbol.for('VBO'),
+	VNBO:Symbol.for('VNBO'),
+	UVBO:Symbol.for('UVBO'),
+	IBO:Symbol.for('IBO'),
+	TYPE:Symbol.for('TYPE'),
+	MATERIAL:Symbol.for('MATERIAL'),
+	GEOMETRY:Symbol.for('GEOMETRY'),
+	UPDATER:Symbol.for('UPDATER'),
+	UPDATE_LIST:Symbol.for('UPDATE_LIST'),
+	PARENT_SCENE:Symbol.for('PARENT_SCENE'),
+	MATRIX:Symbol.for('MATRIX'),
+	SKY_BOX:Symbol.for('SKY_BOX')
+})

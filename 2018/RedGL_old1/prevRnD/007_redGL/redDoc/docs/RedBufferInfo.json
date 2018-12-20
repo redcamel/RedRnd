@@ -1,0 +1,172 @@
+[
+  {
+    "title": "ARRAY_BUFFER",
+    "code": "CONST",
+    "description": "ARRAY_BUFFER 지정 상수",
+    "example": "RedBufferInfo.ARRAY_BUFFER",
+    "return": "String"
+  },
+  {
+    "title": "arrayType",
+    "description": "\n    - 버퍼적용시 전달할 타입드 어레이 타입\n    - 입력된 arrayData와 맞지않은 형식일경우..에러방출\n",
+    "example": "인스턴스.arrayType",
+    "return": "glConst"
+  },
+  {
+    "title": "buffer",
+    "description": "실제버퍼",
+    "example": "인스턴스.buffer",
+    "return": "WebGLBuffer"
+  },
+  {
+    "title": "bufferType",
+    "description": "RedBufferInfo.ARRAY_BUFFER or RedBufferInfo.ELEMENT_ARRAY_BUFFER",
+    "example": "인스턴스.bufferType",
+    "return": "String"
+  },
+  {
+    "title": "drawMode",
+    "description": "그리기모드",
+    "example": "인스턴스.drawMode",
+    "return": "glConst"
+  },
+  {
+    "title": "ELEMENT_ARRAY_BUFFER",
+    "code": "CONST",
+    "description": "ELEMENT_ARRAY_BUFFER 지정 상수",
+    "example": "RedBufferInfo.ELEMENT_ARRAY_BUFFER",
+    "return": "String"
+  },
+  {
+    "title": "enabled",
+    "description": "버퍼의 로케이션이 활성화 되었는지 여부",
+    "example": "인스턴스.enabled",
+    "return": "Boolean"
+  },
+  {
+    "title": "key",
+    "description": "고유키",
+    "example": "인스턴스.key",
+    "return": "String"
+  },
+  {
+    "title": "normalize",
+    "description": "버퍼 적용시 노말라이즈 할지 여부",
+    "example": "인스턴스.normalize",
+    "return": "Boolean"
+  },
+  {
+    "title": "offset",
+    "description": "start at the beginning of the buffer",
+    "example": "인스턴스.offset",
+    "return": "Integer"
+  },
+  {
+    "title": "pointNum",
+    "description": "버퍼의 포인트 전체 갯수",
+    "example": "인스턴스.pointNum",
+    "return": "Integer"
+  },
+  {
+    "title": "pointSize",
+    "description": "포인트 구성수",
+    "example": "인스턴스.pointSize",
+    "return": "Integer"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedBufferInfo",
+    "description": "\n    - RedBufferInfo 인스턴스 생성자\n    - <b>유일키</b>만 지원하며 키 중복일경우 기존 캐싱된 버퍼 정보를 반환함.\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "Red Instance"
+        },
+        "redGL 인스턴스"
+      ],
+      "bufferType": [
+        {
+          "type": "String"
+        },
+        "- 버퍼타입을 지정",
+        "- RedBufferInfo.ARRAY_BUFFER or RedBufferInfo.ELEMENT_ARRAY_BUFFER"
+      ],
+      "key": [
+        {
+          "type": "String"
+        },
+        "- 등록될 키명"
+      ],
+      "shaderPointerKey": [
+        {
+          "type": "null or String"
+        },
+        "- <b>arrayBuffer일때만 사용</b>",
+        "- Shade내의 바인딩될 attribute이름"
+      ],
+      "arrayData": [
+        {
+          "type": "TypedArray"
+        },
+        "버퍼 raw data"
+      ],
+      "pointSize": [
+        {
+          "type": "Integer"
+        },
+        "포인트 구성사이즈"
+      ],
+      "pointNum": [
+        {
+          "type": "Integer"
+        },
+        "포인트 갯수",
+        "입력하지않으면 rawData/pointSize로 자동입력"
+      ],
+      "arrayType": [
+        {
+          "type": "glConst"
+        },
+        "ex) gl.FLOAT"
+      ],
+      "normalize": [
+        {
+          "type": "Boolean"
+        },
+        "기본값 : false"
+      ],
+      "stride": [
+        {
+          "type": "Integer"
+        },
+        "기본값 : 0"
+      ],
+      "offset": [
+        {
+          "type": "Integer"
+        },
+        "기본값 : 0"
+      ],
+      "drawMode": [
+        {
+          "type": "glConst"
+        },
+        "기본값 : gl.STATIC_DRAW"
+      ]
+    },
+    "example": "\n    var test;\n    test = RedGL(Canvas Element)\n    // basic이라는 이름으로 버텍스 쉐이더를 만든다. \n    test.createShaderInfo('basic', RedBufferInfo.VERTEX_SHADER, 쉐이더소스)\n    test.createShaderInfo('basic', RedBufferInfo.FRAGMENT_SHADER, 쉐이더소스)\n    test.createProgramInfo(\n        'basic',\n        test.createShaderInfo('basic', RedBufferInfo.VERTEX_SHADER),\n        test.createShaderInfo('basic', RedBufferInfo.FRAGMENT_SHADER)\n    )\n",
+    "return": "RedBufferInfo Instance"
+  },
+  {
+    "title": "shaderPointerKey",
+    "description": "쉐이더연동될 포인터 네임",
+    "example": "인스턴스.shaderPointerKey",
+    "return": "Strinf"
+  },
+  {
+    "title": "stride",
+    "description": "0 = move forward size * sizeof(type) each iteration to get the next position",
+    "example": "인스턴스.stride",
+    "return": "Integer"
+  }
+]

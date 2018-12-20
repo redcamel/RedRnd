@@ -1,0 +1,32 @@
+[
+  {
+    "code": "FUNCTION",
+    "title": "cube",
+    "description": "\n    - cube 지오메트리가 반환됨,\n    - 생성시 내부적으로 'RedPrimitiveCube' + '_' + width + '_' + height + '_' + depth + '_' + widthSegments + '_' + heightSegments + '_' + depthSegments 키로 캐싱한뒤..\n    - share되는 지오메트리를 생성한다.\n",
+    "return": "RedPrimitivePlane Instance"
+  },
+  {
+    "code": "FUNCTION",
+    "title": "grid",
+    "description": "\n    - grid 지오메트리가 반환됨,\n    - 생성시 내부적으로 'RedPrimitiveFloor' + '_' + w + '_' + h 키로 캐싱한뒤..\n    - share되는 지오메트리를 생성한다.\n",
+    "return": "RedPrimitiveFloor Instance"
+  },
+  {
+    "code": "FUNCTION",
+    "title": "plane",
+    "description": "\n    - plane 지오메트리가 반환됨,\n    - 생성시 내부적으로 'RedPrimitivePlane' + '_' + width + '_' + height + '_' + segmentW + '_' + segmentH 키로 캐싱한뒤..\n    - share되는 지오메트리를 생성한다.\n",
+    "return": "RedPrimitivePlane Instance"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedPrimitive",
+    "description": "\n    - RedPrimitive 생성기\n",
+    "return": "RedPrimitive Instance"
+  },
+  {
+    "code": "FUNCTION",
+    "title": "sphere",
+    "description": "\n    - sphere 지오메트리가 반환됨,\n    - 생성시 내부적으로 'RedPrimitiveSphere' + '_' + radius + '_' + widthSegments + '_' + heightSegments + '_' + phiStart + '_' + phiLength + '_' + thetaStart + '_' + thetaLength 키로 캐싱한뒤..\n    - share되는 지오메트리를 생성한다.\n",
+    "return": "RedPrimitiveSphere Instance"
+  }
+]

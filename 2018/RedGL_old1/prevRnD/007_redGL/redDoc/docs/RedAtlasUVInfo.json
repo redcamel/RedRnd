@@ -1,0 +1,16 @@
+[
+  {
+    "constructorYn": true,
+    "title": "RedAtlasUVInfo",
+    "description": "\n    - <b>RedAtlasTextureManager</b>에 의해 자동 생성된 <b>RedAtlasUVInfo</b>.\n    - <span style=\"color:red\">렌더링시 고정 유니폼인 <b>uAtlascoord</b>에 사용된다.</span>\n    - 사용자 생성은 금지한다.\n    - Object.freeze 상태로 반환.\n",
+    "params": {
+      "uvArray": [
+        {
+          "type": "Array"
+        },
+        "- 생성초기값"
+      ]
+    },
+    "return": "RedAtlasUVInfo instance"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "constructorYn": true,
+    "title": "RedTextureInfo",
+    "description": "\n- 기본 텍스쳐 생성기\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "RedGL Instance"
+        }
+      ],
+      "src": [
+        {
+          "type": "String or CanvasElement"
+        },
+        "텍스쳐경로나 캔버스 오브젝트만 사용가능"
+      ]
+    },
+    "example": "\nvar testGL\ntestGL = RedGL(document.getElementById('test'), true)\nRedTextureInfo(testGL, 'asset/crate.png')\n",
+    "return": "RedTextureInfo Instance"
+  }
+]

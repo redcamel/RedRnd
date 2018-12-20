@@ -1,0 +1,87 @@
+[
+  {
+    "title": "attributes",
+    "description": "쉐이더에 등록된 attribute 정보들",
+    "example": "인스턴스.attributes",
+    "return": "Object"
+  },
+  {
+    "title": "key",
+    "description": "고유키",
+    "example": "인스턴스.key",
+    "return": "String"
+  },
+  {
+    "title": "onDefineTexture",
+    "description": "\n - 재질의 텍스쳐 갱신시 실행할 매서드\n",
+    "example": "인스턴스.onDefineTexture",
+    "return": "void"
+  },
+  {
+    "title": "onInitUniformValue",
+    "description": "\n - 재질 초기화시 필요한 초기 값들선언.\n",
+    "example": "인스턴스.onInitUniformValue",
+    "return": "void"
+  },
+  {
+    "title": "program",
+    "description": "실제 프로그램",
+    "example": "인스턴스.program",
+    "return": "WebGLProgram"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedProgramInfo",
+    "description": "\n    - RedProgramInfo 인스턴스 생성자\n    - <b>유일키</b>만 지원.\n    - 프로그램 정보는 <b>Object.freeze</b> 상태로 반환됨.\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "Red Instance"
+        },
+        "redGL 인스턴스"
+      ],
+      "key": [
+        {
+          "type": "String"
+        },
+        "- 등록될 키명"
+      ],
+      "vShaderInfo": [
+        {
+          "type": "RedShaderInfo"
+        }
+      ],
+      "fShaderInfo": [
+        {
+          "type": "RedShaderInfo"
+        }
+      ],
+      "onInitUniformValue": [
+        {
+          "type": "Function"
+        },
+        "- 유니폼 초기화시 실행될  핸들러"
+      ],
+      "onDefineTexture": [
+        {
+          "type": "Function"
+        },
+        "- 텍스쳐 유니폼 초기화시 실행될 핸들러"
+      ]
+    },
+    "example": "\n    var test;\n    test = RedGL(Canvas Element)\n    // basic이라는 이름으로 버텍스 쉐이더를 만든다. \n    test.createShaderInfo('basic', RedProgramInfo.VERTEX_SHADER, 쉐이더소스)\n    test.createShaderInfo('basic', RedProgramInfo.FRAGMENT_SHADER, 쉐이더소스)\n    test.createProgramInfo(\n        'basic',\n        test.getShaderInfo('basic', RedProgramInfo.VERTEX_SHADER),\n        test.getShaderInfo('basic', RedProgramInfo.FRAGMENT_SHADER),\n        function (target) {\n            target.materialUniforms.uAtlascoord = RedAtlasUVInfo([0, 0, 1, 1])\n        },\n        function (target) {\n            target.materialUniforms['RedMaterialInfo.DIFFUSE_TEXTURE'] = target['uDiffuseTexture']\n        }\n      )\n",
+    "return": "RedProgramInfo Instance"
+  },
+  {
+    "title": "shaderInfos",
+    "description": "프로그램에 사용된 RedShaderInfo정보",
+    "example": "인스턴스.shaderInfos",
+    "return": "Object"
+  },
+  {
+    "title": "uniforms",
+    "description": "쉐이더에 등록된 uniform 정보들",
+    "example": "인스턴스.uniforms",
+    "return": "Object"
+  }
+]

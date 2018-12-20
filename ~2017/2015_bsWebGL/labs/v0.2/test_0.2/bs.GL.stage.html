@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>bs.GL.stage Test suit</title>
+	<meta charset="utf-8" />
+	<meta name="keywords" content="bsjs 0.4" />
+	<meta name="description" content="bsjs 0.4 Test suite" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="viewport"
+	      content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />
+</head>
+<body>
+<div id="stage"></div>
+<br clear="both">
+
+<div id="result"></div>
+<div id="test"></div>
+<script src="http://projectbs.github.io/bsJS/bsjs.0.6.js"></script>
+<script src="bsTest.js"></script>
+<script src="printer.js"></script>
+<div id="testUI">
+	<li>	</li>
+	<li>	</li>
+	<li>	</li>
+	<li>	</li>
+</div>
+<script>
+	bs( function() {
+		bs.require( function() {
+			var stage0 = new bs.GL()
+			var stage1 = new bs.GL( null, 'preserveDrawingBuffer', 1 )
+			var stage2 = new bs.GL( bs.Dom( '<canvas></canvas>' ) )
+			var stage3 = new bs.GL( bs.Dom( '<canvas></canvas>' ), 'preserveDrawingBuffer', 1)
+			var testStage = new bs.GL()
+
+            bs.ANI.ani({
+                ANI:function(){
+                    stage0._background.r = Math.random()
+                    stage0._background.g = Math.random()
+                    stage0._background.b = Math.random()
+                    stage1._background.r = Math.random()
+                    stage1._background.g = Math.random()
+                    stage1._background.b = Math.random()
+                    stage2._background.r = Math.random()
+                    stage2._background.g = Math.random()
+                    stage2._background.b = Math.random()
+                    stage3._background.r = Math.random()
+                    stage3._background.g = Math.random()
+                    stage3._background.b = Math.random()
+                }
+            })
+
+            bs.WIN.sizer( function( w, h ) {
+                stage0.S( '<', 'body', 'top', 50, 'left', w - 350 )
+                stage1.S( '<', 'body', 'top', 210, 'left', w - 350 )
+                stage2.S( '<', 'body', 'top', 370, 'left', w - 350 )
+                stage3.S( '<', 'body', 'top', 530, 'left', w - 350 )
+            } )
+
+            var t0 = bs.Dom( '#testUI li' )
+            var i = t0.length
+            var stageList = [stage0,stage1,stage2,stage3]
+            while( i-- ){
+                bs.Dom(t0[i]).S(
+                        '>',bs.Dom('<div>stage'+i+'. rendering</div>'),
+                        '>',bs.Dom('<button>true</button>' ).S(
+                                '@idx',i,
+                                'down',function(){
+                                    stageList[this.idx].rendering = 1
+                                },'this'
+                        ),
+                        '>',bs.Dom('<button>false</button>' ).S(
+                                '@idx',i,
+                                'down',function(){
+                                    stageList[this.idx].S('background','#000'),
+                                            stageList[this.idx].rendering = 0
+                                },'this'
+                        )
+                )
+            }
+			bsTest( 'bs.GL:stage',
+					function() {
+						var result = (stage0 == stage1)
+						return result
+					}, false
+			)
+
+			bsTest( 'bs.GL:initialize by null',
+					function() {
+						var result = stage0.__gl != null
+						return result
+					}, true
+			)
+			bsTest( 'bs.GL:initialize by null with init propertys',
+					function() {
+						var result = stage1.__gl != null
+						return result
+					}, true
+			)
+			bsTest( 'bs.GL:initialize by bs.Dom',
+					function() {
+						var result = stage2.__gl != null
+						return result
+					}, true
+			)
+			bsTest( 'bs.GL:initialize by bs.Dom with init propertys',
+					function() {
+						var result = stage3.__gl != null
+						return result
+					}, true
+			)
+			bsTest( 'bs.GL:background',
+					function() {
+						testStage.S('background','#fff')
+						var result = (testStage._background.r+testStage._background.b+testStage._background.g)== 255*3
+						testStage.S('background','#000000')
+						var result2 = (testStage._background.r+testStage._background.b+testStage._background.g)== 0
+						return result && result2
+					}, true
+			)
+            bsTest( 'stage:width,height',
+                    function() {
+                        stage3.S('width',300)
+                        var result =  stage3.S('width')==300
+                        stage3.S('height',200)
+                        var result2 =  stage3.S('height')==200
+                        return result && result2
+                    }, true
+            )
+            bsTest( 'stage:<',
+                    function() {
+                        var result =  stage3.S('<')==document.body
+                        return result
+                    }, true
+            )
+
+
+
+		}, '../gl.0.2.js' )
+
+	} )
+</script>
+</body>
+</html>

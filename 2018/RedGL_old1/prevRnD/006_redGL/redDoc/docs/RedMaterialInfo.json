@@ -1,0 +1,47 @@
+[
+  {
+    "title": "diffuseInfo",
+    "description": "\n    - diffuseInfo\n",
+    "example": "인스턴스.diffuseInfo",
+    "return": "RedTextureInfo"
+  },
+  {
+    "title": "needUniformList",
+    "description": "\n    - 렌더링시 유니폼리스트를 다시 만들어야할지 여부\n    - 시스템에서 자동으로 설정한다.\n",
+    "example": "인스턴스.needUniformList",
+    "return": "Boolean"
+  },
+  {
+    "title": "programInfo",
+    "description": "재질에 사용된 프로그램정보",
+    "example": "인스턴스.programInfo",
+    "return": "RedProgramInfo"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedMaterialInfo",
+    "description": "\n    - RedGL에서 사용할 재질정보를 정의\n    - 타입키에 해당하는 RedMaterialDefine 정의가 존재하지않을경우 에러\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "RedGL Instance"
+        },
+        "- redGL 인스턴스"
+      ],
+      "type": [
+        {
+          "type": "String"
+        },
+        "- 재질 타입 지정"
+      ]
+    },
+    "example": "\n    var test;\n    test = RedGL(Canvas Element)\n    // basic이라는 이름으로 버텍스 쉐이더를 만든다. \n    test.createShaderInfo(test,'basic', RedProgramInfo.VERTEX_SHADER, 쉐이더소스)\n    test.createShaderInfo(test,'basic', RedProgramInfo.FRAGMENT_SHADER, 쉐이더소스)\n    // basic이라는 이름으로 프로그램을 만든다. \n    test.createProgram(\n        test,'basic',\n        test.createShaderInfo(test,'basic', RedProgramInfo.VERTEX_SHADER),\n        test.createShaderInfo(test,'basic', RedProgramInfo.FRAGMENT_SHADER)\n    )\n    // basic이라는 타입의 재질 정의한다.\n    RedMaterialDefine(test, test.getProgramInfo('basic'))\n    // basic재질을 실제로 생성한다.\n    RedMaterialInfo(test,'basic')\n",
+    "return": "RedMaterialInfo Instance"
+  },
+  {
+    "title": "uniforms",
+    "description": "\n    - 렌더링시 참고할 유니폼데이터\n",
+    "example": "인스턴스.uniforms",
+    "return": "Object"
+  }
+]

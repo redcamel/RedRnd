@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<script>
+
+</script>
+<canvas id="test"></canvas>
+<canvas id="test2"></canvas>
+<script src="src/teapot.js"></script>
+<script src="src/RedGL.js"></script>
+<script>
+    RedGL(function (){
+                RedGL.debug=true
+                var scale = 13,scale2
+                let t0 = RedGL.getGL('#test')
+                let t1 = RedGL.getGL('#test2')
+                let tScene = RedGL.Scene()
+                t0.scene = tScene
+                t1.scene = tScene
+                console.log(t0.scene)
+                console.log(t1.scene)
+//                console.log(t1.scene )
+                let i
+                let tGeo,tGeo2
+
+                //////////////
+                //////////////
+
+                //스타이박스 테스트
+                let matTest2 = RedGL.Material('skyBox',[
+                    'skybox/snow_positive_x.jpg',
+                    'skybox/snow_negative_x.jpg',
+                    'skybox/snow_positive_y.jpg',
+                    'skybox/snow_negative_y.jpg',
+                    'skybox/snow_positive_z.jpg',
+                    'skybox/snow_negative_z.jpg'
+                ])
+                tGeo = RedGL.Primitive('skyBox')
+                let test2 = RedGL.Mesh(
+                        tGeo,
+                        matTest2,
+                        0,
+                        0,
+                        -1000
+                )
+                tScene.skyBox=test2
+
+                tGeo = RedGL.Primitive('sphere',32,32,32), scale = 120
+                tGeo = RedGL.Geometry('teapot',parseTest['vs'],parseTest['is'],parseTest['uv']), scale = 15
+                tGeo = RedGL.Primitive('cube',32,32,32), scale  = 250
+                tGeo2 = RedGL.Primitive('sphere',32,32,32)
+                console.log(tGeo)
+                const testColor = '#ee2233,#223344,#554466,#9944ee,#554466'.split(',')
+                let matTest = RedGL.Material('bitmapPhongLight','diffuseTest.png','normalTest.png','specularTest.png')
+//                let matTest = RedGL.Material('bitmapPhongLight','diffuseTest.png')
+                matTest.shininess = 128
+                matTest.specularPower = 2
+                matTest.specularColor = '#ffffff'
+//                let matTest = RedGL.Material('colorGouraud','#554466')
+                let test = RedGL.Mesh(
+                        tGeo,
+                        matTest,
+                        0,0,-1000
+                )
+
+
+                test.scaleX = scale
+                test.scaleY = scale
+                test.scaleZ = scale
+                test.rotationY = 180
+                tScene.addChild(test)
+
+                ///////////////////////////////
+                // 차일드 테스트
+                var childTest
+                childTest = RedGL.Mesh(
+                        tGeo2,
+                        matTest,
+                        0,0,0
+                )
+                childTest.x = 300
+                childTest.scaleX = 50
+                childTest.scaleY = 50
+                childTest.scaleZ = 50
+                childTest.parent = test
+                test.addChild(childTest)
+
+                var childTest
+                childTest = RedGL.Mesh(
+                        tGeo2,
+                        matTest,
+                        0,0,0
+                )
+                childTest.x = -300
+                childTest.scaleX = 50
+                childTest.scaleY = 50
+                childTest.scaleZ = 50
+                childTest.parent = test
+                               test.addChild(childTest)
+/////////////////////////////////
+                // 차일드에 차일드 테스트
+
+                var childTest2
+                childTest2 = RedGL.Mesh(
+                        tGeo2,
+                        matTest,
+                        0,0,0
+                )
+                childTest2.x = 100
+                childTest2.scaleX = 25
+                childTest2.scaleY = 25
+                childTest2.scaleZ = 25
+                childTest2.parent = childTest
+                tScene.addChild(childTest2)
+
+                childTest2 = RedGL.Mesh(
+                        tGeo2,
+                        matTest,
+                        0,0,0
+                )
+                childTest2.x = -100
+                childTest2.scaleX = 25
+                childTest2.scaleY = 25
+                childTest2.scaleZ = 25
+                childTest2.parent = childTest
+                tScene.addChild(childTest2)
+
+                childTest2 = RedGL.Mesh(
+                        tGeo2,
+                        matTest,
+                        0,0,0
+                )
+                childTest2.y = 100
+                childTest2.scaleX = 25
+                childTest2.scaleY = 25
+                childTest2.scaleZ = 25
+                childTest2.parent = childTest
+                tScene.addChild(childTest2)
+
+                childTest2 = RedGL.Mesh(
+                        tGeo2,
+                        matTest,
+                        0,0,0
+                )
+                childTest2.y = -100
+                childTest2.scaleX = 25
+                childTest2.scaleY = 25
+                childTest2.scaleZ = 25
+                childTest2.parent = childTest
+                tScene.addChild(childTest2)
+                /////////////////////////
+                var childTest
+                childTest = RedGL.Mesh(
+                        tGeo2,
+                        matTest,
+                        0,0,0
+                )
+                childTest.y = 300
+                childTest.scaleX = 50
+                childTest.scaleY = 50
+                childTest.scaleZ = 50
+                               test.addChild(childTest)
+
+                childTest.parent = test
+/////////////////////////////////
+                // 차일드에 차일드 테스트
+
+                var childTest2
+                childTest2 = RedGL.Mesh(
+                        tGeo2,
+                        matTest,
+                        0,0,0
+                )
+                childTest2.x = 100
+                childTest2.scaleX = 25
+                childTest2.scaleY = 25
+                childTest2.scaleZ = 25
+                childTest2.parent = childTest
+                tScene.addChild(childTest2)
+
+                childTest2 = RedGL.Mesh(
+                        tGeo2,
+                        matTest,
+                        0,0,0
+                )
+                childTest2.x = -100
+                childTest2.scaleX = 25
+                childTest2.scaleY = 25
+                childTest2.scaleZ = 25
+                childTest2.parent = childTest
+                tScene.addChild(childTest2)
+
+                childTest2 = RedGL.Mesh(
+                        tGeo2,
+                        matTest,
+                        0,0,0
+                )
+                childTest2.y = 100
+                childTest2.scaleX = 25
+                childTest2.scaleY = 25
+                childTest2.scaleZ = 25
+                childTest2.parent = childTest
+                tScene.addChild(childTest2)
+
+                childTest2 = RedGL.Mesh(
+                        tGeo2,
+                        matTest,
+                        0,0,0
+                )
+                childTest2.y = -100
+                childTest2.scaleX = 25
+                childTest2.scaleY = 25
+                childTest2.scaleZ = 25
+                childTest2.parent = childTest
+                tScene.addChild(childTest2)
+                /////////////////////////
+                var childTest
+                childTest = RedGL.Mesh(
+                        tGeo2,
+                        matTest,
+                        0,0,0
+                )
+                childTest.y = -300
+                childTest.scaleX = 50
+                childTest.scaleY = 50
+                childTest.scaleZ = 50
+                childTest.parent = test
+                               test.addChild(childTest)
+                /////////////////////////////////
+                // 차일드에 차일드 테스트
+
+                var childTest2
+                childTest2 = RedGL.Mesh(
+                        tGeo2,
+                        matTest,
+                        0,0,0
+                )
+                childTest2.x = 100
+                childTest2.scaleX = 25
+                childTest2.scaleY = 25
+                childTest2.scaleZ = 25
+                childTest2.parent = childTest
+                tScene.addChild(childTest2)
+
+                childTest2 = RedGL.Mesh(
+                        tGeo2,
+                        matTest,
+                        0,0,0
+                )
+                childTest2.x = -100
+                childTest2.scaleX = 25
+                childTest2.scaleY = 25
+                childTest2.scaleZ = 25
+                childTest2.parent = childTest
+                tScene.addChild(childTest2)
+
+                childTest2 = RedGL.Mesh(
+                        tGeo2,
+                        matTest,
+                        0,0,0
+                )
+                childTest2.y = 100
+                childTest2.scaleX = 25
+                childTest2.scaleY = 25
+                childTest2.scaleZ = 25
+                childTest2.parent = childTest
+                tScene.addChild(childTest2)
+
+                childTest2 = RedGL.Mesh(
+                        tGeo2,
+                        matTest,
+                        0,0,0
+                )
+                childTest2.y = -100
+                childTest2.scaleX = 25
+                childTest2.scaleY = 25
+                childTest2.scaleZ = 25
+                childTest2.parent = childTest
+                tScene.addChild(childTest2)
+                /////////////////////////
+
+                test = RedGL.Mesh(
+                        tGeo,
+                        matTest,
+                        0,0,-1000
+                )
+                test.x = 300
+                test.z = -2200
+                test.scaleX = scale
+                test.scaleY = scale
+                test.scaleZ = scale
+                test.rotationY = 180
+                tScene.addChild(test)
+                test = RedGL.Mesh(
+                        tGeo,
+                        matTest,
+                        0,0,-1000
+                )
+                test.x = -300
+                test.z = -900
+
+                scale= 200
+                test.scaleX = scale
+                test.scaleY = scale
+                test.scaleZ = scale
+                test.rotationY = 180
+                tScene.addChild(test)
+
+                ///////////////////////////////
+
+                console.log(t0)
+                console.log(t1)
+                let w = 0,h = 0
+//                t0.background='#2233440.5'
+                t0.setSize(550,768)
+                t1.setSize(500,768)
+//                setInterval((function (){
+//                    var test = 1
+//                    return function (){
+////                    matTest = RedGL.Material('color','#554466')
+//                        test++
+//                        if(test%3==0){
+//                            tGeo = RedGL.Primitive('cube',32,32,32), scale = 250
+//                        } else if(test%3==1){
+//                            tGeo = RedGL.Geometry('teapot',parseTest['vs'],parseTest['is'],parseTest['uv']), scale = 15
+//                        } else{
+//                            tGeo = RedGL.Primitive('sphere',32,32,32), scale = 120
+//                        }
+//                        i = tScene.children.length
+//                        let tItem
+//                        while(i--){
+//                            tItem = tScene.children[i]
+//                            tItem.geometry = tGeo
+//                            tItem.material = matTest
+//                            tItem.scaleX = scale
+//                            tItem.scaleY = scale
+//                            tItem.scaleZ = scale
+//                        }
+//                    }
+//                })(),2000);
+                //primitive테스트
+                t0.updater = function (){
+                    w += 0.01, h += 0.01
+                    i = tScene.children.length
+                    let tItem
+                    while(i--){
+                        tItem = tScene.children[i]
+                        tItem.rotationX += 0.85
+                        tItem.rotationY += 0.35
+                        tItem.rotationZ += 0.45
+//                        tItem.material.specularPower = Math.sin(tItem.rotationZ/5)+Math.PI
+                    }
+//                    t0.camera.x = Math.sin(tItem.rotationZ/25)*1000
+//                    t0.camera.y = Math.cos(tItem.rotationZ/25)*1000
+//                    t0.camera.z = Math.sin(tItem.rotationZ/25)*1000+1000
+                    tScene.directionalLight.r = Math.abs(Math.sin(tItem.rotationX/25))
+                    tScene.directionalLight.g = Math.abs(Math.cos(tItem.rotationY/5))
+                    tScene.directionalLight.b = Math.abs(Math.cos(tItem.rotationZ/12))
+                    tScene.directionalLight.intensity = Math.abs(Math.cos(tItem.rotationZ/12))*2
+
+//                    tScene.directionalLight.x = Math.sin(tItem.rotationX/24)
+//                    tScene.directionalLight.y = Math.cos(tItem.rotationY/24)
+//                    tScene.directionalLight.z = Math.cos(tItem.rotationZ/24)
+
+                    ////
+                    t0.camera.rotationX += 0.15
+                    t0.camera.rotationY += 0.15
+                    t0.camera.rotationZ += 0.15
+//                    t1.camera.rotation += 0.15
+                    /////
+//                    t0.background = {r:(Math.random()*255)/255,g:(Math.random()*255)/255,b:(Math.random()*255)/255,a:1}
+                    t0.setSize(500,Math.abs(Math.cos(h)*384)+384)
+//                    t1.background = {r:(Math.random()*255)/255,g:(Math.random()*255)/255,b:(Math.random()*255)/255,a:1}
+                    t1.setSize(500,Math.abs(Math.cos(h)*384)+384)
+                }
+            },
+            'src/gl-matrix.js',
+            'src/detect.js',
+            'src/const.js',
+            'src/util.js',
+            'src/material.js',
+            'src/geometry.js',
+            'src/primitive.js',
+            'src/mesh.js',
+            'src/shader.js',
+            'src/light.js',
+            'src/camera.js',
+            'src/scene.js',
+            'src/world.js'
+    )
+</script>
+</body>
+</html>

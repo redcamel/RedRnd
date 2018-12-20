@@ -1,0 +1,24 @@
+[
+  {
+    "title": "color",
+    "description": "\n    - 라이트 컬러\n    - 기본값 : new Float32Array([0.03, 0.03, 0.03, 1])\n",
+    "code": "PROPERTY",
+    "example": "인스턴스.color",
+    "return": "Float32Array(4)"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedAmbientLightInfo",
+    "description": "\n    - RedAmbientLightInfo 생성\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "RedGL Instance"
+        },
+        "- redGL 인스턴스"
+      ]
+    },
+    "example": "\n    var test;\n    test = RedGL(Canvas Element)\n    test.createAmbientLight()\n",
+    "return": "RedAmbientLightInfo Instance"
+  }
+]

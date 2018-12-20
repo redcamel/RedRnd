@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/src/redcamel/Host.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/redcamel/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/redcamel/assets/test.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/redcamel/red2D/display/RedCanvas.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/redcamel/red2D/display/RedDisplayObject.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/redcamel/red2D/display/RedRender.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/redcamel/red2D/display/RedSheet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/redcamel/red2D/display/RedSprite.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/redcamel/red2D/display/RedStage.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/redcamel/red2D/particle/RedParticaleEmiter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/redcamel/red2D/tween/RedTween.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/redcamel/red2D/utils/RedImageLoader.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/redcamel/red2D/utils/RedUtil.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

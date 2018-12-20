@@ -1,0 +1,16 @@
+[
+  {
+    "constructorYn": true,
+    "title": "RedTexture",
+    "description": "\n- 기본 텍스쳐 생성기\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "RedGL Instance"
+        }
+      ]
+    },
+    "example": "\nTODO:\n",
+    "return": "RedTexture Instance"
+  }
+]

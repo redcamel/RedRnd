@@ -1,0 +1,69 @@
+[
+  {
+    "title": "attributes",
+    "description": "\n    - attribute Buffer 정보들\n    - vertexPosition,texcoord,normal 키는 고정키이다.\n",
+    "example": "인스턴스.attributes",
+    "return": "Object"
+  },
+  {
+    "title": "indices",
+    "description": "indices Buffer 정보",
+    "example": "인스턴스.indices",
+    "return": "RedbufferInfo"
+  },
+  {
+    "title": "key",
+    "description": "고유키",
+    "example": "인스턴스.key",
+    "return": "String"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedGeometryInfo",
+    "description": "\n    - RedGeometryInfo 인스턴스 생성자\n    - <b>유일키</b>만 지원하며 키 중복일경우 에러발생         \n",
+    "params": {
+      "redGL": [
+        {
+          "type": "RedGL Instance"
+        },
+        "- redGL 인스턴스"
+      ],
+      "key": [
+        {
+          "type": "String"
+        },
+        "- 등록될 키명"
+      ],
+      "verticesBufferInfo": [
+        {
+          "type": "RedBufferInfo"
+        },
+        "- 버텍스버퍼정보",
+        "- RedBufferInfo.ARRAY_BUFFER 타입만가능"
+      ],
+      "indicesBufferInfo": [
+        {
+          "type": "RedBufferInfo"
+        },
+        "- 인덱스버퍼정보",
+        "- RedBufferInfo.ELEMENT_ARRAY_BUFFER 타입만가능"
+      ],
+      "texcoordBufferInfo": [
+        {
+          "type": "RedBufferInfo"
+        },
+        "- UV버퍼정보",
+        "- RedBufferInfo.ARRAY_BUFFER 타입만가능"
+      ],
+      "normalBufferInfo": [
+        {
+          "type": "RedBufferInfo"
+        },
+        "- normal버퍼정보",
+        "- RedBufferInfo.ARRAY_BUFFER 타입만가능"
+      ]
+    },
+    "example": "\n    //TODO:\n",
+    "return": "RedGeometryInfo Instance"
+  }
+]

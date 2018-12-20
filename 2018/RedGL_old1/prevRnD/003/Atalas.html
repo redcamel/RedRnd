@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>이걸또 첨부터 파고앉아있 -_;;</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"
+    />
+
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <script type="text/javascript" src="gl-matrix-min.js"></script>
+    <script src="https://redcamel.github.io/Recard/beta/release/recard.min.js"></script>
+
+    <script src="Atlas.js"></script>
+</head>
+
+<body>
+    <script>
+        var atlas
+        var atlasList
+        var createAtlas = function(img){
+            var t0;
+            if(img && (img.width > 2048 || img.height > 2048)) throw '이미지가 너무커!'
+            t0 = Recard.Dom('canvas').S('@width',2048,'@height',2048,'background', 'red','margin',5).__dom__
+            document.body.appendChild(t0)
+            atlas= new Atlas(t0);
+            atlasList.push(atlas)
+            console.log('생성!')
+            // atlas.tilepad = true;
+        }
+        atlasList = []
+        createAtlas()
+      
+    
+
+        function atlasPack(img) {
+                atlas = atlasList[atlasList.length - 1]
+                var node = atlas.pack(img);
+                if (node === false) {
+                    // 아틀라스를 전체를 돌면서 찾아야하고..
+                    // TODO: 공간없는놈은 어떻게 찾지?
+                    i = atlasList.length
+                    while (i--) {
+                        // 기존있는놈중에 들어가면 종료시키고
+                        var node = atlas.pack(img);
+                        if (node) return
+                    }
+                    // 여기까지 흘러들어오면 아틀라스캔버스 자체를 추가한다.
+                    if (node === false) {
+                        createAtlas(img)
+                        atlas.pack(img)
+                    }
+                }
+                //TODO: 아틀라스가 변경되면 실제로 텍스쳐가 어떻게 참조하지?
+                // console.log(img, atlas)
+
+            }
+            var texturePath = 'asset/';
+        [
+            'crate','test',
+            'draft1','draft2','draft3','draft4','draft5'
+        ].forEach(function (name) {
+            var img = new Image();
+            img.id = name;
+            img.src = texturePath + name + '.png';
+            img.onload = function () {
+                atlasPack(img);
+            };
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+[
+  {
+    "title": "children",
+    "description": "씬이 물고있는 Mesh리스트들",
+    "example": "인스턴스.children",
+    "return": "Array"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedSceneInfo",
+    "description": "\n    - RedGL에서 사용할 재질정보를 정의\n    - 타입키에 해당하는 정의가 존재하지않을경우 에러\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "RedGL Instance"
+        },
+        "- redGL 인스턴스"
+      ],
+      "key": [
+        {
+          "type": "String"
+        },
+        "- 키"
+      ]
+    },
+    "example": "\n    var test;\n    test = RedGL(Canvas Element)\n    // firstScene 키로 Scene생성\n    RedSceneInfo(test,'firstScene')\n",
+    "return": "RedSceneInfo Instance"
+  }
+]

@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>webgl2.0</title>
+    <style>
+        body{
+            font-size: 11px
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id='cvs'></canvas>
+    <ul>
+        <li>
+            쉐이더 내에서 아래와 같이 지정이 가능함
+            <br> layout(location = 4) in vec4 a_position;
+        </li>
+        <li>
+            프로그램 링크전 지정도 가능
+            <br> gl.bindAttribLocation(program, 3, "a_position"); // 만들때 지정해버릴수도있군..
+            <br> gl.linkProgram(program);
+        </li>
+        <li>
+            동시적용시 layout(location = XXX)가 우선순위를 가짐
+        </li>
+    </ul>
+</body>
+
+<script src="index.js"></script>
+
+</html>

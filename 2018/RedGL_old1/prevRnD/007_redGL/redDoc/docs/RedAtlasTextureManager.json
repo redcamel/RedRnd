@@ -1,0 +1,36 @@
+[
+  {
+    "title": "getByKey",
+    "code": "PROPERTY",
+    "description": "\n- 이미지등록시 사용된 src를 key로 해당하는 RedAtlasTextureInfo 맵을 조회한다.\n",
+    "example": "\nRedAtlasTextureManager.getByKey('찾고싶은 src')\n",
+    "return": "RedAtlasTextureInfo instance"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedAtlasTextureManager",
+    "description": "\n    - <b>Atlas를 생성하고 텍스쳐관련작업을 자동으로 관리하는 오브젝트</b>\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "RedGL"
+        },
+        "- redGL Instance"
+      ],
+      "srcList": [
+        {
+          "type": "String or Array"
+        },
+        "단일 문자열로 들어오면 알아서 배열로 바꿈."
+      ],
+      "callback": [
+        {
+          "type": "Function"
+        },
+        "아틀라스 완성후 실행할 콜백."
+      ]
+    },
+    "example": "\n    RedAtlasTextureManager(redGLInstance, 원하는경로, 콜백이필요하면 콜백)\n",
+    "return": "RedAtlasTextureManager OBJECT"
+  }
+]

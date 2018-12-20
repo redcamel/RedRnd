@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>이걸또 첨부터 파고앉아있 -_;;</title>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"/>
+  
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <script type="text/javascript" src="gl-matrix-min.js"></script>
+    <script src="https://redcamel.github.io/Recard/beta/release/recard.min.js"></script>
+    <script src="Atlas.js"></script>
+    <script id="shader-fs-bitmap" type="x-shader/x-fragment">
+            precision mediump float;
+            varying vec2 vTexcoord;
+            uniform sampler2D uTexture;
+            void main(void) {
+                //gl_FragColor = texture2D(uTexture, uAtlascoord.xy + vTexcoord*uAtlascoord.zw);
+                gl_FragColor = texture2D(uTexture, vTexcoord);
+            }
+    </script>
+    <script id="shader-vs-bitmap" type="x-shader/x-vertex">
+            attribute vec3 aVertexPosition;
+            attribute vec2 aTexcoord;
+            uniform mat4 uMVMatrix;
+            uniform mat4 uPMatrix;
+            uniform vec4 uAtlascoord;
+            varying vec2 vTexcoord;  
+            void main(void) {
+                gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+                vTexcoord = uAtlascoord.xy + aTexcoord*uAtlascoord.zw;
+            }
+    </script>
+    <script id="shader-fs" type="x-shader/x-fragment">
+            precision mediump float;
+            uniform vec3 uColor;
+            void main(void) {
+                gl_FragColor = vec4(uColor, 1.0);
+            }
+    </script>
+    <script id="shader-vs" type="x-shader/x-vertex">
+            attribute vec3 aVertexPosition;        
+            uniform mat4 uMVMatrix;
+            uniform mat4 uPMatrix;         
+            void main(void) {
+                gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+             
+            }
+    </script>
+    <script src="helper.js"></script>
+</head>
+<body>
+    <canvas id="lesson01-canvas" style="border: none;background:red" width="1280" height="960" ></canvas>
+    <script src="001_hello.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+[
+  {
+    "constructorYn": true,
+    "title": "RedTextureInfo",
+    "description": "\n- 기본 텍스쳐 생성기\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "RedGL Instance"
+        }
+      ],
+      "targetIndex": [
+        {
+          "type": "Integer"
+        },
+        "타겟 인덱스를 지정한다.",
+        "기본인덱스는 1번을 사용함"
+      ]
+    },
+    "example": "\nTODO:\n",
+    "return": "RedTextureInfo Instance"
+  }
+]

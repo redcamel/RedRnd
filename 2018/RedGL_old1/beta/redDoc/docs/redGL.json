@@ -1,0 +1,261 @@
+[
+  {
+    "title": "createAmbientLight",
+    "code": "FUNCTION",
+    "description": "암비언트라이트 단축 생성 매서드"
+  },
+  {
+    "title": "createArrayBufferInfo",
+    "code": "FUNCTION",
+    "description": "Array버퍼 생성 단축 매서드"
+  },
+  {
+    "title": "createBaseCameraInfo",
+    "code": "FUNCTION",
+    "description": "베이스카메라 단축 생성 매서드"
+  },
+  {
+    "title": "createBaseRenderInfo",
+    "code": "FUNCTION",
+    "description": "렌더러 단축 생성 매서드"
+  },
+  {
+    "title": "createCubeTextureInfo",
+    "code": "FUNCTION",
+    "description": "큐브 텍스쳐정보 생성 단축 매서드"
+  },
+  {
+    "title": "createDirectionalLight",
+    "code": "FUNCTION",
+    "description": "방향광 단축 생성 매서드"
+  },
+  {
+    "title": "createGeometryInfo",
+    "code": "FUNCTION",
+    "description": "지오메트리정보 생성 단축 매서드"
+  },
+  {
+    "title": "createIndexBufferInfo",
+    "code": "FUNCTION",
+    "description": "ElementArray버퍼 생성 단축 매서드"
+  },
+  {
+    "title": "createMaterialDefine",
+    "code": "FUNCTION",
+    "description": "재질정의정보 생성 단축 매서드"
+  },
+  {
+    "title": "createMaterialInfo",
+    "code": "FUNCTION",
+    "description": "재질정보 생성 단축 매서드"
+  },
+  {
+    "title": "createMeshInfo",
+    "code": "FUNCTION",
+    "description": "매시정보 단축 생성 매서드"
+  },
+  {
+    "title": "createPointLight",
+    "code": "FUNCTION",
+    "description": "점광 단축 생성 매서드"
+  },
+  {
+    "title": "createProgram",
+    "code": "FUNCTION",
+    "description": "프로그램 생성 단축 매서드"
+  },
+  {
+    "title": "createSceneInfo",
+    "code": "FUNCTION",
+    "description": "씬정보 단축 생성 매서드"
+  },
+  {
+    "title": "createShaderInfo",
+    "code": "FUNCTION",
+    "description": "\n- RedGL 쉐이더 생성기.\n- 유일키만 지원하며 키 중복일경우 기존 캐싱된 쉐이더정보를 반환함.\n- 단 프레그먼트/버텍스의 키는 따로 관리함.\n",
+    "params": {
+      "key": [
+        {
+          "type": "String"
+        },
+        "- 등록될 키명"
+      ],
+      "type": [
+        {
+          "type": "String"
+        },
+        "- 버텍스 쉐이더(RedShaderInfo.VERTEX_SHADER)",
+        "- 프레그먼트 쉐이더(RedShaderInfo.FRAGMENT_SHADER)"
+      ],
+      "source": [
+        {
+          "type": "String"
+        },
+        "- 생성할 쉐이더 소스문자열"
+      ]
+    },
+    "example": "\nvar test;\ntest = RedGL(Canvas Element)\n// basic이라는 이름으로 버텍스 쉐이더를 만든다. \ntest.createShaderInfo('basic', RedShaderInfo.VERTEX_SHADER, 쉐이더소스)\n",
+    "return": "RedShaderInfo Instance"
+  },
+  {
+    "title": "createSkyBoxInfo",
+    "code": "FUNCTION",
+    "description": "스카이박스 단축 생성 매서드"
+  },
+  {
+    "title": "createTextureInfo",
+    "code": "FUNCTION",
+    "description": "텍스쳐정보 생성 단축 매서드"
+  },
+  {
+    "title": "getArrayBufferInfo",
+    "code": "FUNCTION",
+    "description": "Array버퍼 조회 매서드",
+    "parmas": {
+      "key": [
+        {
+          "type": "String"
+        },
+        "키로 등록된 Array버퍼를 조회함"
+      ]
+    }
+  },
+  {
+    "title": "getBaseCameraInfo",
+    "code": "FUNCTION",
+    "description": "베이스 카메라정보 조회 단축 매서드",
+    "parmas": {
+      "key": [
+        {
+          "type": "String"
+        },
+        "키로 등록된 베이스 카메라를 조회함"
+      ]
+    }
+  },
+  {
+    "title": "getGeometryInfo",
+    "code": "FUNCTION",
+    "description": "지오메트리정보 조회 매서드.",
+    "parmas": {
+      "key": [
+        {
+          "type": "String"
+        },
+        "키로 등록된 지오메트리정보를 조회함"
+      ]
+    }
+  },
+  {
+    "title": "getIndexBufferInfo",
+    "code": "FUNCTION",
+    "description": "ElementArray버퍼 조회 매서드",
+    "parmas": {
+      "key": [
+        {
+          "type": "String"
+        },
+        "키로 등록된 ElementArray버퍼를 조회함"
+      ]
+    }
+  },
+  {
+    "title": "getMeshInfo",
+    "code": "FUNCTION",
+    "description": "매시정보 조회 단축 매서드",
+    "parmas": {
+      "key": [
+        {
+          "type": "String"
+        },
+        "키로 등록된 매쉬를 조회함"
+      ]
+    }
+  },
+  {
+    "title": "getProgramInfo",
+    "code": "FUNCTION",
+    "description": "프로그램 조회",
+    "parmas": {
+      "key": [
+        {
+          "type": "String"
+        },
+        "키로 등록된 프로그램을 조회함"
+      ]
+    }
+  },
+  {
+    "title": "getShaderInfo",
+    "code": "FUNCTION",
+    "description": "\n- 정의된 쉐이더를 조회\n"
+  },
+  {
+    "title": "getSourceFromScript",
+    "code": "FUNCTION",
+    "description": "\nscript 소스를 가져옴\n",
+    "params": {
+      "id": [
+        {
+          "type": "String"
+        },
+        "아이디"
+      ]
+    },
+    "example": "\n인스턴스.getSourceFromScript(id)\n",
+    "return": "String"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedGL",
+    "description": "\nRedGL 인스턴스 생성자\n<b>초기화 옵션</b>\nalpha: false,\ndepth: true,\nstencil: false,\nantialias: true,\npremultipliedAlpha: false,\npreserveDrawingBuffer: false,\npowerPreference: 'default', // default, high-performance, low-power\nfailIfMajorPerformanceCaveat: false\n",
+    "params": {
+      "canvas": [
+        {
+          "type": "Canvas Element"
+        }
+      ],
+      "callback": [
+        {
+          "type": "function"
+        },
+        "컨텍스트 초기화이후 실행될 콜백"
+      ],
+      "fullMode": [
+        {
+          "type": "Boolean"
+        },
+        "- 기본값 false",
+        "- true일경우 윈도우사이즈가 변할때마다 추적함"
+      ],
+      "shaderSourceInfo": [
+        {
+          "type": "Object"
+        },
+        "미리로드할 쉐이더 소스정보"
+      ]
+    },
+    "example": "\n// 기초 초기화\nRedGL(document.getElementById('test'), function(){ 콜백내용 })\n// 풀스크린 초기화\nRedGL(document.getElementById('test'), function(){ 콜백내용 }, true)\n// 쉐이더 추가 초기화\nRedGL(document.getElementById('test'), function(){ 콜백내용 }, true, [\n// 추가할 쉐이더 소스를 아래의 형식으로 입력\n{ id: 'colorVS', src: 'glsl/colorVS.glsl' },\n{ id: 'colorFS', src: 'glsl/colorFS.glsl' },\n{ id: 'bitmapVS', src: 'glsl/bitmapVS.glsl' },\n{ id: 'bitmapFS', src: 'glsl/bitmapFS.glsl' },\n{ id: 'bitmapPhongVS', src: 'glsl/bitmapPhongVS.glsl' },\n{ id: 'bitmapPhongFS', src: 'glsl/bitmapPhongFS.glsl' },\n{ id: 'skyBoxVS', src: 'glsl/skyBoxVS.glsl' },\n{ id: 'skyBoxFS', src: 'glsl/skyBoxFS.glsl' }\n])\n",
+    "return": "RedGL Instance"
+  },
+  {
+    "title": "setSize",
+    "code": "FUNCTION",
+    "description": "\nwengl 캔버스의 크기를 지정함.\n인자를 입력하지 않으면 화면상의 풀사이즈로 적용됨\n",
+    "params": {
+      "width": [
+        {
+          "type": "Number"
+        },
+        "가로값"
+      ],
+      "height": [
+        {
+          "type": "Number"
+        },
+        "세로값"
+      ]
+    },
+    "example": "\n인스턴스.setSize(600,600)\n"
+  }
+]

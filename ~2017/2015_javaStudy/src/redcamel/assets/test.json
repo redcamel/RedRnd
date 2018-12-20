@@ -1,0 +1,307 @@
+{
+  "channel": {
+    "result": 10,
+    "title": "Search SCC Open API",
+    "totalCount": 1,
+    "page": 1,
+    "q": "미생",
+    "item": [
+      {
+        "genre": [
+          {
+            "content": "드라마",
+            "link": ""
+          },
+          {
+            "content": "로맨스/멜로",
+            "link": ""
+          },
+          {
+            "content": "액션",
+            "link": ""
+          },
+          {
+            "content": "공포",
+            "link": ""
+          }
+        ],
+        "res": [
+          {
+            "content": "",
+            "link": ""
+          }
+        ],
+        "trailer": [
+          {
+            "content": "http://movie.daum-img.net/movie/movie-trailer/96/14/41496/vclip_41496.jpg|한석율 예고편|20130617|30|Y",
+            "link": "http://movie.daum.net/moviedetailVideoView.do?movieId=79008&videoId=41496"
+          }
+        ],
+        "photo1": {
+          "content": "http://cfile19.uf.daum.net/C93x70/275D104B519ED7051431DF",
+          "link": "http://movie.daum.net/moviedetailPhotoView.do?movieId=79008&photoId=875546"
+        },
+        "actor": [
+          {
+            "content": "임시완|http://t1.daumcdn.net/movie/45210751d46f9a38d101e91d683d99b9ed04fa27|장그래|주연",
+            "link": "http://movie.daum.net/movieperson/Summary.do?personId=166282"
+          },
+          {
+            "content": "창민|http://cfile118.uf.daum.net/image/24726F38544F2EFF189BCE|장백기|주연",
+            "link": "http://movie.daum.net/movieperson/Summary.do?personId=137484"
+          },
+          {
+            "content": "김보라|http://cfile18.uf.daum.net/image/241C40425464678F0B3527|안영이|주연",
+            "link": "http://movie.daum.net/movieperson/Summary.do?personId=160706"
+          },
+          {
+            "content": "바로|http://cfile78.uf.daum.net/image/035C554F51837781047468|김영찬|주연",
+            "link": "http://movie.daum.net/movieperson/Summary.do?personId=351111"
+          },
+          {
+            "content": "조희봉|http://cfile18.uf.daum.net/image/2209C13352709BAE2D015D|오차장|주연",
+            "link": "http://movie.daum.net/movieperson/Summary.do?personId=76524"
+          },
+          {
+            "content": "임현식|http://cfile189.uf.daum.net/image/12402310B030BC431AB7AA|미지의 경비|주연",
+            "link": "http://movie.daum.net/movieperson/Summary.do?personId=15971"
+          },
+          {
+            "content": "문세윤|http://cfile89.uf.daum.net/image/2076F3054BB00A651C3B93|김동식|주연",
+            "link": "http://movie.daum.net/movieperson/Summary.do?personId=97796"
+          }
+        ],
+        "story": [
+          {
+            "content": "윤태호 작가의 인기 웹툰 '미생'을 모바일 단편 옴니버스 영화화하는 프로젝트로 원작자인 윤태호 작가와의 인터뷰를 거쳐 미생 세대 시나리오 작가인 민예지 작가가 미생의 등장인물 6명의 프리퀄(원작 작품 내용에 앞선 사건을 담은 속편)을 구성했으며, 미생 본편에 모두 쓰지 못했던 주인공들의 과거 이야기를 속시원히 풀어낼 예정이다. 연출은 손태겸 감독이 장그래편, 김대리편, 장백기편을 김태희 감독이 안영이편, 오차장편, 한석율편을 각각 맡으며 2013년 5월 24일 '장그래편'을 시작으로 Daum 모바일앱에서 순차적으로 공개된다. \r\n\r\n※ 각 편의 영화정보 \r\n1. 장그래 프리퀄편 (드라마｜9분｜개봉 2013-05-24)\r\n2. 안영이 프리퀄편 (학원로맨스｜8분｜개봉 2013-05-31)\r\n3. 오차장 프리퀄편 (도심질주액션극｜8분｜개봉 2013-06-07)\r\n4. 김동식 프리퀄편 (사내로맨스｜5분｜개봉 2013-06-14)\r\n5. 장백기 프리퀄편 (학원공포/드라마｜5분｜개봉 2013-06-21)\r\n6. 한석률 프리퀄편 (유년기 가족드라마｜5분｜개봉 2013-06-21)",
+            "link": "http://movie.daum.net/moviedetailStory.do?movieId=79008"
+          }
+        ],
+        "write_grades": [
+          {
+            "content": "",
+            "link": "http://movie.daum.net/moviedetailNetizenPoint.do?movieId=79008"
+          }
+        ],
+        "title": [
+          {
+            "content": "미생 프리퀄",
+            "link": "http://movie.daum.net/moviedetail/moviedetailMain.do?movieId=79008"
+          }
+        ],
+        "audience_date": [
+          {
+            "content": "",
+            "link": ""
+          }
+        ],
+        "video_info": [
+          {
+            "content": "27",
+            "link": "http://movie.daum.net/moviedetailVideoList.do?movieId=79008"
+          }
+        ],
+        "event": [
+          {
+            "content": "",
+            "link": ""
+          }
+        ],
+        "more_actor": [
+          {
+            "content": "",
+            "link": "http://movie.daum.net/moviedetailCastCrew.do?movieId=79008"
+          }
+        ],
+        "photo_info": [
+          {
+            "content": "361",
+            "link": "http://movie.daum.net/moviedetailPhotoList.do?movieId=79008"
+          }
+        ],
+        "year": [
+          {
+            "content": "2013",
+            "link": ""
+          }
+        ],
+        "ogr_title": [
+          {
+            "content": "",
+            "link": ""
+          }
+        ],
+        "video": [
+          {
+            "content": "http://movie.daum-img.net/movie/movie-trailer/94/14/41494/vclip_41494.jpg|장백기 예고편|20130617|30|Y",
+            "link": "http://movie.daum.net/moviedetailVideoView.do?movieId=79008&videoId=41494"
+          },
+          {
+            "content": "http://movie.daum-img.net/movie/movie-trailer/30/14/41430/vclip_41430.jpg|김동식 예고편|20130611|30|Y",
+            "link": "http://movie.daum.net/moviedetailVideoView.do?movieId=79008&videoId=41430"
+          },
+          {
+            "content": "http://movie.daum-img.net/movie/movie-trailer/68/12/41268/vclip_41268.jpg|안영이 예고편|20130528|30|Y",
+            "link": "http://movie.daum.net/moviedetailVideoView.do?movieId=79008&videoId=41268"
+          },
+          {
+            "content": "http://movie.daum-img.net/movie/movie-trailer/48/11/41148/vclip_41148.jpg|장그래 예고편|20130516|30|Y",
+            "link": "http://movie.daum.net/moviedetailVideoView.do?movieId=79008&videoId=41148"
+          }
+        ],
+        "kword": [
+          {
+            "content": "미생",
+            "link": ""
+          }
+        ],
+        "open_info": [
+          {
+            "content": "2013.05.24",
+            "link": ""
+          },
+          {
+            "content": "전체관람가",
+            "link": ""
+          },
+          {
+            "content": "60분",
+            "link": ""
+          }
+        ],
+        "audience": [
+          {
+            "content": "",
+            "link": ""
+          }
+        ],
+        "director": [
+          {
+            "content": "손태겸|http://cfile117.uf.daum.net/image/193DA9394E7340371C693C",
+            "link": "http://movie.daum.net/movieperson/Summary.do?personId=265969"
+          },
+          {
+            "content": "김태희|http://cfile189.uf.daum.net/image/146F1B10AB296E45B74BE3",
+            "link": "http://movie.daum.net/movieperson/Summary.do?personId=100995"
+          }
+        ],
+        "nation": [
+          {
+            "content": "한국",
+            "link": ""
+          }
+        ],
+        "homepage": [
+          {
+            "content": "",
+            "link": ""
+          }
+        ],
+        "category": [
+          {
+            "content": "단편",
+            "link": ""
+          }
+        ],
+        "thumbnail": [
+          {
+            "content": "http://cfile117.uf.daum.net/C110x160/231AB84F51AD703D2F09BC",
+            "link": ""
+          }
+        ],
+        "eng_title": [
+          {
+            "content": "Incomplete Life : Prequel",
+            "link": ""
+          }
+        ],
+        "grade3": [
+          {
+            "content": "0",
+            "link": "http://movie.daum.net/moviedetailNetizenPoint.do?movieId=79008&type=after"
+          },
+          {
+            "content": "메이져와 마이너의 차이 프로와 아마추어 차이 뭐 이정도인거 같네",
+            "link": "http://movie.daum.net/moviedetailNetizenPoint.do?movieId=79008&type=after"
+          },
+          {
+            "content": "2014.12.30",
+            "link": ""
+          }
+        ],
+        "photo2": {
+          "content": "http://cfile116.uf.daum.net/C93x70/235D104B519ED70A18B619",
+          "link": "http://movie.daum.net/moviedetailPhotoView.do?movieId=79008&photoId=875550"
+        },
+        "grades": [
+          {
+            "content": "8.5",
+            "link": "http://movie.daum.net/moviedetailNetizenPoint.do?movieId=79008&type=after"
+          },
+          {
+            "content": "168",
+            "link": ""
+          }
+        ],
+        "expect_grades": [
+          {
+            "content": "4.2",
+            "link": "http://movie.daum.net/moviedetailNetizenPoint.do?movieId=79008&type=before"
+          },
+          {
+            "content": "406",
+            "link": ""
+          }
+        ],
+        "photo3": {
+          "content": "http://cfile18.uf.daum.net/C93x70/245D104B519ED7091785C2",
+          "link": "http://movie.daum.net/moviedetailPhotoView.do?movieId=79008&photoId=875549"
+        },
+        "photo4": {
+          "content": "http://cfile16.uf.daum.net/C93x70/225D104B519ED70816FB64",
+          "link": "http://movie.daum.net/moviedetailPhotoView.do?movieId=79008&photoId=875548"
+        },
+        "grade1": [
+          {
+            "content": "5",
+            "link": "http://movie.daum.net/moviedetailNetizenPoint.do?movieId=79008&type=after"
+          },
+          {
+            "content": "미생드라마를보고 프리퀄을보게 되었는데 그게 함정이였던것같네요ㅜ안영이는 좀더 아버지와의 대립관계를 이끌었다면..오차장은 과거와 현제의 성격이 너무다르고.김대리님 내용도..장백기는 내용은좋았으나 연기가ㅜ하지만 장그래편의 영상미와 잔잔한 내래이션! 현재를 유추할수있는 구성은 좋았어요.",
+            "link": "http://movie.daum.net/moviedetailNetizenPoint.do?movieId=79008&type=after"
+          },
+          {
+            "content": "2015.06.10",
+            "link": ""
+          }
+        ],
+        "wiki_url": [
+          {
+            "content": "http://100.daum.net/encyclopedia/view.do?docid=10X1168491",
+            "link": ""
+          }
+        ],
+        "photo5": {
+          "content": "http://cfile18.uf.daum.net/C93x70/215D104B519ED708159ECA",
+          "link": "http://movie.daum.net/moviedetailPhotoView.do?movieId=79008&photoId=875547"
+        },
+        "grade2": [
+          {
+            "content": "4",
+            "link": "http://movie.daum.net/moviedetailNetizenPoint.do?movieId=79008&type=after"
+          },
+          {
+            "content": "뭔가 좀 마이 어색했다",
+            "link": "http://movie.daum.net/moviedetailNetizenPoint.do?movieId=79008&type=after"
+          },
+          {
+            "content": "2015.06.01",
+            "link": ""
+          }
+        ]
+      }
+    ],
+    "debug": {},
+    "pk": ""
+  }
+}

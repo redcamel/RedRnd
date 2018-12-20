@@ -1,0 +1,16 @@
+[
+  {
+    "constructorYn": true,
+    "title": "RedMeshInfo",
+    "description": "\n   - 기본 스카이박스 생성기\n",
+    "params": {
+      "srcList": [
+        {
+          "type": "Array"
+        },
+        "\n            tGL.TEXTURE_CUBE_MAP_POSITIVE_X<br>\n            tGL.TEXTURE_CUBE_MAP_NEGATIVE_X<br>\n            tGL.TEXTURE_CUBE_MAP_POSITIVE_Y<br>\n            tGL.TEXTURE_CUBE_MAP_NEGATIVE_Y<br>\n            tGL.TEXTURE_CUBE_MAP_POSITIVE_Z<br>\n            tGL.TEXTURE_CUBE_MAP_NEGATIVE_Z<br>\n        순으로 입력\n        "
+      ]
+    },
+    "return": "RedSkyBox Instance"
+  }
+]

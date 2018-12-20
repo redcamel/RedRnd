@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>여섯번째....</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"
+    />
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #111;
+            color: #eee;
+            font-size: 12px;
+            user-select: none
+        }
+
+        .style-1::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            background-color: #333;
+        }
+
+        .style-1::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+        }
+
+        .style-1::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+            background-color: #555;
+        }
+    </style>
+    <link rel="stylesheet" href="https://redcamel.github.io/Recard/beta/lib/prism.css">
+    <script src='https://redcamel.github.io/Recard/beta/lib/prism.js'></script>
+    <script src='https://redcamel.github.io/Recard/beta/release/recard.min.js'></script>
+    <script src="../../release/RedGL.js"></script>
+</head>
+
+<body>
+    <script>
+        Recard(function () {
+            Recard.INDEX.init()
+        },
+            'index.js',
+            'structure/Structure_Texture.js',
+            'structure/Structure_Test.js',
+            'structure/Structure_Add.js',
+            'structure/Structure_Multiply.js',
+            'structure/Structure_Final.js',
+            
+            'structure/CompileInfo.js',
+            'ui/InputItem.js',
+            'ui/OutputItem.js',
+            'ui/NodeBox.js',
+            'ui/LINE_MANAGER.js',
+            'TEST_BOX.js',
+            'RED_SHADER_GRID.js',
+            'RED_SHADER_PREVIEW.js'
+            
+
+        )
+    </script>
+</body>
+
+</html>

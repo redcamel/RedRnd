@@ -1,0 +1,23 @@
+[
+  {
+    "constructorYn": true,
+    "title": "RedShaderLoader",
+    "description": "\n<h2>- 걍 소스로딩기</h2>\n<h2>- TODO: 중복로딩을 막아야함...</h2>\n",
+    "params": {
+      "list": [
+        {
+          "type": "Array"
+        },
+        "소스 로딩정보"
+      ],
+      "callback": [
+        {
+          "type": "Function"
+        },
+        "- 소스로딩완료후 실행될 콜백"
+      ]
+    },
+    "example": "\nRedShaderLoader(\n[\n{ id: 'colorVS', src: 'glsl/colorVS.glsl' },\n{ id: 'colorFS', src: 'glsl/colorFS.glsl' },\n{ id: 'bitmapPhongVS', src: 'glsl/bitmapPhongVS.glsl' },\n{ id: 'bitmapPhongFS', src: 'glsl/bitmapPhongFS.glsl' },\n{ id: 'skyBoxVS', src: 'glsl/skyBoxVS.glsl' },\n{ id: 'skyBoxFS', src: 'glsl/skyBoxFS.glsl' }\n],\nfunction(){\nconsole.log('콜백!')\n}\n)\n",
+    "return": "RedSceneInfo Instance"
+  }
+]

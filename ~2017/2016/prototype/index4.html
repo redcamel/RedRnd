@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<script>
+
+</script>
+<canvas id="test"></canvas>
+<canvas id="test2"></canvas>
+<script src="src/teapot.js"></script>
+<script src="src/RedGL.js"></script>
+<script>
+    RedGL(function (){
+
+                RedGL.debug=true
+                let t0 = RedGL.getGL('#test')
+                let t1 = RedGL.getGL('#test2')
+                let tScene = RedGL.Scene()
+                t0.scene = tScene
+                t1.scene = tScene
+                let i
+                let tGeo
+                let matTest2 = RedGL.Material('skyBox',[
+                    'skybox/snow_positive_x.jpg',
+                    'skybox/snow_negative_x.jpg',
+                    'skybox/snow_positive_y.jpg',
+                    'skybox/snow_negative_y.jpg',
+                    'skybox/snow_positive_z.jpg',
+                    'skybox/snow_negative_z.jpg'
+                ])
+                tGeo = RedGL.Primitive('skyBox')
+                let test2 = RedGL.Mesh(
+                        tGeo,
+                        matTest2,
+                        0,
+                        0,
+                        -1000
+                )
+                tScene.skyBox = test2
+                tGeo = RedGL.Primitive('cube',1,1,1)
+                let matTest = RedGL.Material('bitmapPhongLight','diffuseTest.png','normalTest.png','specularTest.png')
+                matTest.shininess = 128
+                matTest.specularPower = 2
+                matTest.specularColor = '#ffffff'
+                let makeItem
+                makeItem = function (parent){
+                    var childTest
+                    childTest = RedGL.Mesh(tGeo,matTest,0,0,0)
+                    childTest.x = 150
+                    childTest.scaleX = parent.scaleX/2, childTest.scaleY = parent.scaleY/2, childTest.scaleZ = parent.scaleZ/2
+                    parent.addChild(childTest)
+                    childTest = RedGL.Mesh(tGeo,matTest,0,0,0)
+                    childTest.x = -150
+                    childTest.scaleX = parent.scaleX/2, childTest.scaleY = parent.scaleY/2, childTest.scaleZ = parent.scaleZ/2
+                    parent.addChild(childTest)
+                    childTest = RedGL.Mesh(tGeo,matTest,0,0,0)
+                    childTest.z = 150
+                    childTest.scaleX = parent.scaleX/2, childTest.scaleY = parent.scaleY/2, childTest.scaleZ = parent.scaleZ/2
+                    parent.addChild(childTest)
+                    childTest = RedGL.Mesh(tGeo,matTest,0,0,0)
+                    childTest.z = -150
+                    childTest.scaleX = parent.scaleX/2, childTest.scaleY = parent.scaleY/2, childTest.scaleZ = parent.scaleZ/2
+                    parent.addChild(childTest)
+                    childTest = RedGL.Mesh(tGeo,matTest,0,0,0)
+                    childTest.y = 150
+                    childTest.scaleX = parent.scaleX/2, childTest.scaleY = parent.scaleY/2, childTest.scaleZ = parent.scaleZ/2
+                    parent.addChild(childTest)
+                    childTest = RedGL.Mesh(tGeo,matTest,0,0,0)
+                    childTest.y = -150
+                    childTest.scaleX = parent.scaleX/2, childTest.scaleY = parent.scaleY/2, childTest.scaleZ = parent.scaleZ/2
+                    parent.addChild(childTest)
+                }
+                for(i = 0; i<70; i++){
+                    let test = RedGL.Mesh(
+                            tGeo,
+                            matTest,
+                            Math.random()*1000-500,Math.random()*1000-500,-2000
+                    )
+                    test.scaleX = 100
+                    test.scaleY = 100
+                    test.scaleZ = 100
+                    test.rotationY = 180*Math.random()
+                    tScene.addChild(test)
+                    makeItem(test)
+                }
+                ///////////////////////////////
+                let w = 0,h = 0
+//                t0.background='#2233440.5'
+                t0.setSize(500,768)
+                t1.setSize(500,768)
+//                setInterval((function (){
+//                    var test = 1
+//                    return function (){
+////                    matTest = RedGL.Material('color','#554466')
+//                        test++
+//                        if(test%3==0){
+//                            tGeo = RedGL.Primitive('cube',32,32,32), scale = 250
+//                        } else if(test%3==1){
+//                            tGeo = RedGL.Geometry('teapot',parseTest['vs'],parseTest['is'],parseTest['uv']), scale = 15
+//                        } else{
+//                            tGeo = RedGL.Primitive('sphere',32,32,32), scale = 120
+//                        }
+//                        i = tScene.children.length
+//                        let tItem
+//                        while(i--){
+//                            tItem = tScene.children[i]
+//                            tItem.geometry = tGeo
+//                            tItem.material = matTest
+//                            tItem.scaleX = scale
+//                            tItem.scaleY = scale
+//                            tItem.scaleZ = scale
+//                        }
+//                    }
+//                })(),2000);
+                //primitive테스트
+                console.log(t0)
+                t0.updater = function (){
+                    w += 0.01, h += 0.01
+                    i = tScene.children.length
+                    let tItem
+                    while(i--){
+                        tItem = tScene.children[i]
+                        tItem.rotationX += 0.25
+                        tItem.rotationY += 0.35
+                        tItem.rotationZ += 0.45
+//                        tItem.material.specularPower = Math.sin(tItem.rotationZ/5)+Math.PI
+                    }
+                    t0.camera.x = Math.sin(tItem.rotationZ/25)*500
+                    t0.camera.y = Math.cos(tItem.rotationZ/25)*500
+                    t0.camera.z = Math.sin(tItem.rotationZ/25)*1000+1000
+//                    tScene.directionalLight.r = Math.abs(Math.sin(tItem.rotationX/25))
+//                    tScene.directionalLight.g = Math.abs(Math.cos(tItem.rotationY/5))
+//                    tScene.directionalLight.b = Math.abs(Math.cos(tItem.rotationZ/12))
+//                    tScene.directionalLight.intensity = Math.abs(Math.cos(tItem.rotationZ/12))*2
+//                    tScene.directionalLight.x = Math.sin(tItem.rotationX/24)
+//                    tScene.directionalLight.y = Math.cos(tItem.rotationY/24)
+//                    tScene.directionalLight.z = Math.cos(tItem.rotationZ/24)
+                    ////
+                    t0.camera.rotationX += 0.35
+                    t0.camera.rotationY += 0.35
+                    t0.camera.rotationZ += 0.45
+                    /////
+//                    t0.background = {r:(Math.random()*255)/255,g:(Math.random()*255)/255,b:(Math.random()*255)/255,a:1}
+//                    t0.setSize(500,Math.abs(Math.cos(h)*384)+384)
+//                    t1.background = {r:(Math.random()*255)/255,g:(Math.random()*255)/255,b:(Math.random()*255)/255,a:1}
+//                    t1.setSize(500,Math.abs(Math.cos(h)*384)+384)
+                }
+            },
+            'src/gl-matrix.js',
+            'src/detect.js',
+            'src/const.js',
+            'src/util.js',
+            'src/material.js',
+            'src/geometry.js',
+            'src/primitive.js',
+            'src/mesh.js',
+            'src/shader.js',
+            'src/light.js',
+            'src/camera.js',
+            'src/scene.js',
+            'src/world.js'
+    )
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+[
+  {
+    "constructorYn": true,
+    "title": "redGLDetect",
+    "description": "\n- webgl 기본정보를 디텍팅한다.\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "RedGL Instance"
+        }
+      ]
+    },
+    "example": "\nredGLDetect(RedGL Instance)\n",
+    "return": "redGLDetect Instance"
+  }
+]

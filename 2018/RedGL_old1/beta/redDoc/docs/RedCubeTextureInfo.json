@@ -1,0 +1,44 @@
+[
+  {
+    "title": "loaded",
+    "code": "PROPERTY",
+    "description": "\n- 텍스쳐 로딩완료여부\n",
+    "example": "\n인스턴스.loaded\n",
+    "return": "0 or 1"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedCubeTextureInfo",
+    "description": "\n- Cube 텍스쳐 생성기\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "RedGL Instance"
+        },
+        "텍스쳐경로나 캔버스 오브젝트만 사용가능"
+      ],
+      "src": [
+        {
+          "type": "Array"
+        },
+        "\nTEXTURE_CUBE_MAP_POSITIVE_X,\nTEXTURE_CUBE_MAP_NEGATIVE_X,\nTEXTURE_CUBE_MAP_POSITIVE_Y, \nTEXTURE_CUBE_MAP_NEGATIVE_Y,\nTEXTURE_CUBE_MAP_POSITIVE_Z,\nTEXTURE_CUBE_MAP_NEGATIVE_Z\n"
+      ],
+      "targetIndex": [
+        {
+          "type": "Integer"
+        },
+        "- 타겟 인덱스를 지정한다.",
+        "- 기본값 : RedTextureIndex.CUBE_REFLECTION",
+        "- RedTextureIndex.CUBE_XXX의 목록을 사용한다."
+      ]
+    },
+    "return": "RedCubeTextureInfo Instance"
+  },
+  {
+    "title": "texture",
+    "code": "PROPERTY",
+    "description": "\n- WebGLTexture 인스턴스\n",
+    "example": "\n인스턴스.loaded\n",
+    "return": "WebGLTexture Instance"
+  }
+]

@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>OffScreenCanvasRnD</title>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"
+    />
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 11px;
+            overflow: hidden;
+        }
+
+    </style>
+    <script src="src/RedGLOffScreen.js"></script>
+</head>
+
+<body>
+
+<button id="test4" style="vertical-align: top">외부에서 오브젝트 추가</button>
+<script id='testSource'>
+    var makeTestUI = function () {
+
+        // 사이즈 조정 생성
+        var testList = [
+            [256, 512],
+            [512, 512],
+            [1024, 512],
+            [1024, 768],
+            [1280, 1024],
+            [1680, 1024],
+            [1920, 1280]
+        ]
+        var tGroup = document.createElement('div')
+        var TODO = document.createElement('ul')
+        TODO.innerHTML = '' +
+            '<li>돔과 워커간 인터페이스 정의</li>' +
+            '<li>RedGLOffScreen(canvas, w, h, hostCode, workerSrc)의 효율적인 정의 구조 구상</li>' +
+            '<li>RedOffScreen는 RedGL.min에 포함되어야하는가 -_-;;</li>';
+        document.body.appendChild(tGroup)
+        document.body.appendChild(TODO)
+        testList.forEach(function (v) {
+            var t0 = document.createElement('button')
+            tGroup.appendChild(t0)
+            t0.style.verticalAlign = 'top'
+            t0.style.margin = '5px'
+            t0.innerHTML = v.toString()
+            t0.addEventListener('mousedown', function () {
+                redOffScreen.setSize(v[0], v[1])
+            })
+        })
+        // 인터페이스 매서드 실행
+        document.getElementById('test4').addEventListener('mousedown', function () {
+
+            redOffScreen.updatePostMessage(
+                {
+                    name: 'addObject',
+                    args: [100]
+                }
+            );
+        })
+    }
+    var redOffScreen
+    var setInit = function () {
+        ///
+        var canvas;
+        canvas = document.createElement('canvas')
+        canvas.style.position = 'absolute'
+        canvas.style.top = '160px'
+        canvas.style.left = '0px'
+        document.body.appendChild(canvas)
+
+        var redGLSrc = 'release/RedGL.min.js' // redGL 라이브러리 경로
+        var hostSrc = 'src/workerHost2.js' // 호스트 코드 경로
+
+        redOffScreen = RedGLOffScreen(canvas, 512, 512, redGLSrc, hostSrc)
+    }
+    // 호스트
+    makeTestUI();
+    setInit();
+
+
+</script>
+
+</body>
+
+</html>

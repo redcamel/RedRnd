@@ -1,0 +1,26 @@
+[
+  {
+    "code": "CONST",
+    "title": "aTexcoord",
+    "description": "\n    - uv 어트리뷰트 고정키 \n",
+    "return": "aTexcoord"
+  },
+  {
+    "code": "CONST",
+    "title": "aVertexNormal",
+    "description": "\n    - 노멀 포지션 어트리뷰트 고정키\n",
+    "return": "aVertexNormal"
+  },
+  {
+    "code": "CONST",
+    "title": "aVertexPosition",
+    "description": "\n    - 버텍스 포지션 어트리뷰트 고정키 \n",
+    "return": "aVertexPosition"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedFixedAttributeKey",
+    "description": "\n    - 고정 어트리뷰트 상수값     \n",
+    "return": "RedFixedAttributeKey Object"
+  }
+]

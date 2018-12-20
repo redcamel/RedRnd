@@ -1,0 +1,29 @@
+[
+  {
+    "title": "programInfo",
+    "description": "실제 재질을 만들때 참고할 programInfo",
+    "example": "인스턴스.programInfo",
+    "return": "RedProgramInfo"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedMaterialDefine",
+    "description": "\n    - RedGL에서 사용할 재질정보를 정의.\n    - <b>유일키</b>만 지원하며 키 중복일경우 에러발생.\n    - <b>Object.freeze</b> 상태로 정의됨.\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "RedGL Instance"
+        },
+        "- redGL 인스턴스"
+      ],
+      "programInfo": [
+        {
+          "type": "RedProgramInfo"
+        },
+        "- 재질과 바인딩될 RedProgramInfo 지정"
+      ]
+    },
+    "example": "\n    var test;\n    test = RedGL(Canvas Element)\n    // basic이라는 이름으로 버텍스 쉐이더를 만든다. \n    test.createShaderInfo('basic', RedProgramInfo.VERTEX_SHADER, 쉐이더소스)\n    test.createShaderInfo('basic', RedProgramInfo.FRAGMENT_SHADER, 쉐이더소스)\n    // basic이라는 이름으로 프로그램을 만든다. \n    test.createProgramInfo(\n        'basic',\n        test.getShaderInfo('basic', RedProgramInfo.VERTEX_SHADER),\n        test.getShaderInfo('basic', RedProgramInfo.FRAGMENT_SHADER)\n    )\n    // basic이라는 타입의 재질을 만든다.\n    RedMaterialDefine(test, test.getProgramInfo('basic'))\n",
+    "return": "RedMaterialDefine Instance"
+  }
+]

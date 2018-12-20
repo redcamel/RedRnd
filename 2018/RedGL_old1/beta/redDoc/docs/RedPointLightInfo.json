@@ -1,0 +1,45 @@
+[
+  {
+    "title": "color",
+    "description": "\n    - 라이트 컬러\n    - 기본값 : new Float32Array([1, 1, 1, 1])\n",
+    "code": "PROPERTY",
+    "example": "인스턴스.color",
+    "return": "Float32Array(4)"
+  },
+  {
+    "title": "position",
+    "description": "라이트 포지션",
+    "code": "PROPERTY",
+    "example": "인스턴스.position",
+    "return": "Float32Array(3)"
+  },
+  {
+    "title": "radius",
+    "description": "라이트 반경",
+    "code": "PROPERTY",
+    "example": "인스턴스.radius",
+    "return": "Number"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedPointLightInfo",
+    "description": "\n    - RedPointLightInfo 생성\n",
+    "params": {
+      "redGL": [
+        {
+          "type": "RedGL Instance"
+        },
+        "- redGL 인스턴스"
+      ]
+    },
+    "example": "\n    var test;\n    test = RedGL(Canvas Element)\n    test.createPointLight()\n",
+    "return": "RedPointLightInfo Instance"
+  },
+  {
+    "title": "useDebugMode",
+    "description": "디버그모드 사용여부",
+    "code": "PROPERTY",
+    "example": "인스턴스.useDebugMode",
+    "return": "Boolean"
+  }
+]

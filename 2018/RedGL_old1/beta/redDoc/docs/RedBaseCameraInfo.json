@@ -1,0 +1,122 @@
+[
+  {
+    "title": "aspect",
+    "description": "- 카메라 aspect",
+    "return": "Number"
+  },
+  {
+    "title": "far",
+    "description": "\n    - 카메라 far\n    - 기본값 1000.0\n",
+    "return": "Number"
+  },
+  {
+    "title": "fov",
+    "description": "\n    - 카메라 fov\n    - 기본값 45(실제 연산시에는 라디안으로 적용해서 계산됨)\n",
+    "return": "Number"
+  },
+  {
+    "title": "lookAt",
+    "code": "FUNCTION",
+    "description": "\n    - 카메라가 targetPosition을 바라보게 설정함.\n",
+    "params": {
+      "targetPosition": [
+        {
+          "type": "position vec3(Float32Array)"
+        },
+        "바라볼 포지션"
+      ]
+    },
+    "return": "RedBaseCameraInfo Instance"
+  },
+  {
+    "title": "moveBack",
+    "code": "FUNCTION",
+    "description": "\n    - TODO: 카메라 시점에서 뒤로 이동\n",
+    "return": "RedBaseCameraInfo Instance"
+  },
+  {
+    "title": "moveDown",
+    "code": "FUNCTION",
+    "description": "\n    - TODO: 카메라 시점에서 아래로 이동\n",
+    "return": "RedBaseCameraInfo Instance"
+  },
+  {
+    "title": "moveForward",
+    "code": "FUNCTION",
+    "description": "\n    - TODO: 카메라 시점에서 앞으로 이동\n",
+    "return": "RedBaseCameraInfo Instance"
+  },
+  {
+    "title": "moveLeft",
+    "code": "FUNCTION",
+    "description": "\n    - TODO: 카메라 시점에서 왼쪽으로 이동\n",
+    "return": "RedBaseCameraInfo Instance"
+  },
+  {
+    "title": "moveRight",
+    "code": "FUNCTION",
+    "description": "\n    - TODO: 카메라 시점에서 오른쪽으로 이동\n",
+    "return": "RedBaseCameraInfo Instance"
+  },
+  {
+    "title": "moveUp",
+    "code": "FUNCTION",
+    "description": "\n    - TODO: 카메라 시점에서 위로 이동\n",
+    "return": "RedBaseCameraInfo Instance"
+  },
+  {
+    "title": "near",
+    "description": "\n    - 카메라 near\n    - 기본값 0.1\n",
+    "return": "Number"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedBaseCameraInfo",
+    "description": "\n    - RedBaseCameraInfo 가장 기본적인 카메라 생성기\n",
+    "example": "\n    testGL.createBaseCameraInfo('testCamera')\n",
+    "return": "RedBaseCameraInfo Instance"
+  },
+  {
+    "title": "setPosition",
+    "code": "FUNCTION",
+    "description": "\n    - 포지션 설정매서드.\n",
+    "params": {
+      "x": [
+        {
+          "type": "Number"
+        },
+        "x포지션"
+      ],
+      "y": [
+        {
+          "type": "Number"
+        },
+        "y포지션"
+      ],
+      "z": [
+        {
+          "type": "Number"
+        },
+        "z포지션"
+      ]
+    },
+    "return": "RedBaseCameraInfo Instance"
+  },
+  {
+    "title": "uCameraMatrix",
+    "description": "\n    - 카메라 매트릭스\n    - 고정유니폼으로서 쉐이더내에 uCameraMatrix 유니폼과 연동된다.\n",
+    "return": "mat4(Float32Arrat)"
+  },
+  {
+    "title": "update",
+    "code": "FUNCTION",
+    "description": "\n    - 퍼스팩티브업데이트\n",
+    "return": "RedBaseCameraInfo Instance"
+  },
+  {
+    "title": "uPMatrix",
+    "code": "PROPERTY",
+    "description": "\n    - 퍼스펙티브 매트릭스\n    - 고정유니폼으로서 쉐이더내에 uPMatrix 유니폼과 연동된다.\n",
+    "return": "mat4(Float32Arrat)"
+  }
+]

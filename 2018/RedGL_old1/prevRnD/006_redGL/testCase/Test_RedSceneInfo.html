@@ -1,0 +1,48 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://redcamel.github.io/Recard/beta/redUnit/lib/redUnit.css">
+	<link rel="stylesheet" href="https://redcamel.github.io/Recard/beta/lib/prism.css">
+	<script src='https://redcamel.github.io/Recard/beta/lib/prism.js'></script>
+	<script src='https://redcamel.github.io/Recard/beta/release/recard.min.js'></script>
+	<script src='https://redcamel.github.io/Recard/beta/redUnit/lib/redUnit.js'></script>
+	<script id="shader-fs" type="x-shader/x-fragment">
+		precision lowp float;
+		uniform vec3 uColor;
+		void main(void) {
+			gl_FragColor = vec4(uColor, 1.0);
+		}
+	</script>
+	<script id="shader-vs" type="x-shader/x-vertex">
+		attribute vec3 aVertexPosition;        
+		uniform mat4 uMVMatrix;
+		uniform mat4 uPMatrix;         
+		void main(void) {
+			gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+		
+		}
+	</script>
+</head>
+
+<body>
+	작성해야함
+	<script>
+		Recard(function () {
+
+		},
+			"../RedShaderInfo.js",
+			"../RedProgramInfo.js",
+			"../RedBufferInfo.js",
+			"../RedGeometryInfo.js",
+			"../RedMeshInfo.js",
+			"../RedMaterialInfo.js",
+			"../RedSceneInfo.js",
+			"../RedRender.js",
+			"../redGL.js",
+			'Test_RedSceneInfo.js'
+		)
+	</script>
+</body>
+
+</html>

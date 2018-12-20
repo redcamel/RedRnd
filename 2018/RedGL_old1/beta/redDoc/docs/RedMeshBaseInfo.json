@@ -1,0 +1,104 @@
+[
+  {
+    "title": "blendFactor1",
+    "description": "\n    - draw시 blendFactor1\n",
+    "example": "인스턴스.blendFactor1",
+    "return": "glConst"
+  },
+  {
+    "title": "blendFactor2",
+    "description": "\n    - draw시 blendFactor2\n",
+    "example": "인스턴스.blendFactor2",
+    "return": "glConst"
+  },
+  {
+    "title": "children",
+    "description": "\n    - 자식노드리스트\n",
+    "example": "인스턴스.children",
+    "return": "Array"
+  },
+  {
+    "title": "cullFace",
+    "description": "\n    - 실제 메쉬를 그릴때 cullFace를 어떤 방식으로 그릴지 결정\n    - 기본값 : gl.BACK\n",
+    "example": "인스턴스.cullFace",
+    "return": "glConst"
+  },
+  {
+    "title": "depthTestFunc",
+    "description": "\n    - depthTest 옵션\n    - 기본값 : tGL.LESS\n",
+    "example": "인스턴스.depthTestFunc",
+    "return": "glConst"
+  },
+  {
+    "title": "drawMode",
+    "description": "\n    - 실제 메쉬를 그릴때 어떠한 방식으로 그릴지 결정\n    - ex) gl.TRIANGLES\n",
+    "example": "인스턴스.drawMode",
+    "return": "glConst"
+  },
+  {
+    "title": "geometryInfo",
+    "description": "\n    - 메쉬가 소유하고있는 geometryInfo\n",
+    "example": "인스턴스.geometryInfo",
+    "return": "RedGeometryInfo"
+  },
+  {
+    "title": "materialInfo",
+    "description": "\n    - 메쉬가 소유하고있는 materialInfo\n",
+    "example": "인스턴스.materialInfo",
+    "return": "RedMaterialInfo"
+  },
+  {
+    "title": "position",
+    "description": "\n    - positionXYZ를 Float32Array로 가진다.\n",
+    "example": "인스턴스.position",
+    "return": "Float32Array(3)"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedMeshBaseInfo",
+    "description": "\n    - 메쉬에 기본적으로 필요한 정보세팅\n    - 시스템적으로 호출\n",
+    "return": "RedMeshBaseInfo Instance"
+  },
+  {
+    "title": "rotation",
+    "description": "\n    - rotationXYZ를 Float32Array로 가진다.\n",
+    "example": "인스턴스.rotation",
+    "return": "Float32Array(3)"
+  },
+  {
+    "title": "scale",
+    "description": "\n    - scaleXYZ를 Float32Array로 가진다.\n",
+    "example": "인스턴스.rotation",
+    "return": "Float32Array(3)"
+  },
+  {
+    "title": "uMVMatrix",
+    "description": "\n    - modelView Matrix를 반환\n    - <span style=\"color:red\"><b>uMVMatrix라는 키값은 쉐이더에서 사용되는 고정값이다.</b></span>\n",
+    "example": "인스턴스.uMVMatrix",
+    "return": "mat4(Float32Array)"
+  },
+  {
+    "title": "uNMatrix",
+    "description": "\n    - modelView 노멀 Matrix를 반환\n    - <span style=\"color:red\"><b>uNMatrix라는 키값은 쉐이더에서 사용되는 고정값이다.</b></span>\n",
+    "example": "인스턴스.uNMatrix",
+    "return": "mat4(Float32Array)"
+  },
+  {
+    "title": "useBlendMode",
+    "description": "\n    - draw시 블렌드모드 사용여부\n    - 기본값 : true\n",
+    "example": "인스턴스.useBlendMode",
+    "return": "boolean"
+  },
+  {
+    "title": "useCullFace",
+    "description": "\n    - 실제 메쉬를 그릴때 cullFace를 사용할지 여부\n    - 기본값 : true\n",
+    "example": "인스턴스.useCullFace",
+    "return": "boolean"
+  },
+  {
+    "title": "useDepthTest",
+    "description": "\n    - draw시 depthTest 사용여부\n    - 기본값 : true\n",
+    "example": "인스턴스.useDepthTest",
+    "return": "boolean"
+  }
+]

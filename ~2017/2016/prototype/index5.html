@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<canvas id="test"></canvas>
+<!--<canvas id="test2"></canvas>-->
+<script src="src/teapot.js"></script>
+<script src="src/RedGL.js"></script>
+<script>
+    RedGL(function (){
+                (function (){
+
+//                    RedGL.debug=true
+                    let t0 = RedGL.getGL('#test')
+                    let tScene = RedGL.Scene()
+                    t0.scene = tScene
+                    let i
+                    let tGeo
+                    let matTest3 = RedGL.Material('bitmapPhongLight','diffuseTest.png','normalTest.png','specularTest.png')
+                    let matTest2 = RedGL.Material('skyBox',[
+                        'skybox/snow_positive_x.jpg',
+                        'skybox/snow_negative_x.jpg',
+                        'skybox/snow_positive_y.jpg',
+                        'skybox/snow_negative_y.jpg',
+                        'skybox/snow_positive_z.jpg',
+                        'skybox/snow_negative_z.jpg'
+                    ])
+                    tGeo = RedGL.Primitive('skyBox')
+                    let testSkyBox = RedGL.Mesh(
+                            tGeo,
+                            matTest2,
+                            0,
+                            0,
+                            -1000
+                    )
+                    testSkyBox.scaleX = testSkyBox.scaleY = testSkyBox.scaleZ = 10000
+                    tScene.skyBox = testSkyBox
+                    // 내부 오브젝트
+                    tGeo = RedGL.Primitive('cube',1,1,1)
+                    let matTest = RedGL.Material('colorPhongLight','#ee2233')
+                    let test = RedGL.Mesh(
+                            tGeo,
+                            matTest,
+                            0,
+                            0,
+                            -1000
+                    )
+                    test.scaleX = test.scaleY = test.scaleZ = 100
+                    let test2 = RedGL.Mesh(
+                            tGeo,
+                            matTest,
+                            100,
+                            100,
+                            0
+                    )
+                    test2.scaleX = test2.scaleY = test2.scaleZ = 50
+                    let test3 = RedGL.Mesh(
+                            tGeo,
+                            matTest,
+                            100,
+                            100,
+                            0
+                    )
+                    test3.scaleX = test3.scaleY = test3.scaleZ = 50
+//                    tScene.addChild(test)
+                    tScene.addChild(test)
+                    test.addChild(test2)
+                    test2.addChild(test3)
+
+
+
+//                    tScene.removeChild(test)
+                    console.log(t0)
+                    t0.setSize(1900,980)
+                    setTimeout(function(){
+                        test2.material = matTest3
+                        setTimeout(function(){
+//                            tScene.removeChild(test)
+                            test.removeChild(test2)
+                        },2000)
+                    },2000)
+                    t0.updater = function (){
+                        i = tScene.children.length
+                        let tItem
+                        while(i--){
+                            tItem = tScene.children[i]
+                            if(!tItem.parent){
+                                tItem.rotationX += 1.21212
+                                tItem.rotationY += 1.52
+                                tItem.rotationZ += 2.25
+                            }
+                        }
+
+                        test2.rotationX += 1.21212
+                        test2.rotationY += 1.52
+                        test2.rotationZ += 2.25
+                    }
+                })();
+            },
+            'src/gl-matrix.js',
+            'src/detect.js',
+            'src/const.js',
+            'src/util.js',
+            'src/material.js',
+            'src/geometry.js',
+            'src/primitive.js',
+            'src/mesh.js',
+            'src/shader.js',
+            'src/light.js',
+            'src/camera.js',
+            'src/scene.js',
+            'src/world.js'
+    )
+</script>
+</body>
+</html>

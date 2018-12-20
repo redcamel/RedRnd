@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>bsWebGL Demos</title>
+    <meta name="keywords" content="bs5 , bsWebGL, webGL" />
+    <meta name="description" content="bsWebGL Demo Page" />
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi" />
+    <link rel="shortcut icon" href="http://blog.bsidesoft.com/favicon.ico" type="image/x-icon">
+    <script src="showcase/bsjs.0.5.js"></script>
+</head>
+<body>
+<div style="clear:both">
+    <div style="background:#111;color:#888;margin-top:10px;padding:8px; margin-left:10px;opacity:0.9;font-size:11px;border-radius:10px;box-shadow:inset 0 1px 0 #333">
+        <a href="https://github.com/projectBS/bsWebGL" target="_blank">https://github.com/projectBS/bsWebGL</a>
+    </div>
+</div>
+<div ids="showcaseList">
+    <div  class="list"><a href="showcase/TEST1_Meterial_Object.html" target="_blank"><img src="showcase/thumbnails/t1.png" />Meterial</a></div>
+    <div  class="list"><a href="showcase/TEST2_speculars.html" target="_blank"><img src="showcase/thumbnails/t2.png" />Specular Color</a></div>
+    <div  class="list"><a href="showcase/TEST3_NORMAL.html" target="_blank"><img src="showcase/thumbnails/t3.png" />NormalMap</a></div>
+    <div  class="list"><a href="showcase/TEST5_SPRITE.html" target="_blank"><img src="showcase/thumbnails/t4.png" />Sprite </a></div>
+    <div  class="list"><a href="showcase/TEST4_ENV.html" target="_blank"><img src="showcase/thumbnails/t5.png" />environment</a></div>
+    <div  class="list"><a href="showcase/TEST4_Cube.html" target="_blank"><img src="showcase/thumbnails/t6.png" />cubemap</a></div>
+    <div  class="list"><a href="showcase/TEST6_OBJ_PARSE.html" target="_blank"><img src="showcase/thumbnails/t7.png" />bs.GL.parseOBJ 시안</a></div>
+    <div  class="list"><a href="showcase/TEST7_ParticleAni.html" target="_blank"><img src="showcase/thumbnails/t8.png" />particle</a></div>
+    <div  class="list"><a href="showcase/TEST9_videoMat.html" target="_blank"><img src="showcase/thumbnails/t9.png" />video Material</a></div>
+    <div  class="list"><a href="showcase/TEST8_anagraphy.html" target="_blank"><img src="showcase/thumbnails/t10.png" />적청입체 시안 테스트</a></div>
+    <div  class="list"><a href="showcase/TEST11_Hierarchy.html" target="_blank"><img src="showcase/thumbnails/t11.png" />하이라키 테스트중</a></div>
+    <div  class="list"><a href="showcase/TEST12_oimo.html" target="_blank"><img src="showcase/thumbnails/t12.png" />OIMO 엔진 연계 테스트</a></div>
+    <div  class="list"><a href="showcase/TEST13_Text.html" target="_blank"><img src="showcase/thumbnails/t13.png" />Text 개발중</a></div>
+    <div  class="list"><a href="showcase/TEST14_getElementById.html" target="_blank"><img src="showcase/thumbnails/t14.png" />getElementById </a></div>
+    <div  class="list"><a href="showcase/TEST15_getElementsByClassName.html" target="_blank"><img src="showcase/thumbnails/t15.png" />getElementsByClassName </a></div>
+    <div  class="list"><a href="showcase/TEST16_LODTest.html" target="_blank"><img src="showcase/thumbnails/t16.png" />LOD 개발중</a></div>
+    <div  class="list"><a href="showcase/TEST17_tweenTest.html" target="_blank"><img src="showcase/thumbnails/t17.png" />bs.ANI.gl</a></div>
+	<div  class="list"><a href="showcase/TEST18_Mesh_With_Id.html" target="_blank"><img src="showcase/thumbnails/t17.png" />bs.GL.Mesh('TYPE@ID')</a></div>
+	<div  class="list"><a href="showcase/TEST19_deview2014.html" target="_blank"><img src="showcase/thumbnails/t18.png" />Deview2014 Showcase</a></div>
+
+</div>
+<pre style="clear:both; background:#111;color:#888;margin-top:10px;padding:8px; margin-left:10px;opacity:0.9;font-size:11px;border-radius:10px;box-shadow:inset 0 1px 0 #333">
+    bsWebGL 커미터를 모집합니다.
+    bsWebGL을 함께 발전시켜갈 커미터들을 모집합니다.
+    커미터가 되는방법은 단 하나입니다. 신청 페이지에 댓글을 다는것입니다.
+
+    <a href="https://www.facebook.com/photo.php?fbid=828142343867893" target="_blank">https://www.facebook.com/photo.php?fbid=828142343867893</a> 에
+    GitHub 아이디와 함께 'bsWebGL의 Push 권한 주세요'
+    라고 댓글 달아주시면 처리해 드립니다.
+
+    bsWebGL - <a href="https://github.com/projectbs/bsWebGL" target="_blank">https://github.com/projectbs/bsWebGL</a>
+    bsWebGLTest - <a href="https://github.com/projectbs/bsWebGLTest" target="_blank">https://github.com/projectbs/bsWebGLTest</a>
+    bsWebGLBlog - <a href="http://www.bswebgl.com" target="_blank">http://www.bswebgl.com</a>
+</pre>
+
+<script>
+    bs( function(){
+        bs.Css('body').S('background','#333333')
+        bs.Css("img").S( 'border', 0, 'display', 'block', 'margin-bottom', 10,'width',185 );
+        bs.Css("a").S( 'text-decoration', 'none','font-size',12,'color','#fff' );
+        bs.Css(".list").S(
+                'background','#111','text-align', 'center', "font-weight", "bold", "border", "1px solid #444", "padding", 10, "margin",2,
+                'float', 'left','border-radius', 10,
+                'box-shadow','inset 0 1px 0 #333','opacity',0.9
+        );
+    } );
+</script>
+</body>
+</html>
+

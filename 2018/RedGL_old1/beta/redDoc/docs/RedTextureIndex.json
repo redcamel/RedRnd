@@ -1,0 +1,57 @@
+[
+  {
+    "title": "CREATE",
+    "code": "CONST",
+    "description": "\n- 텍스쳐 생성시 자동부여되는 기본인덱스\n- 텍스쳐 생성완료이후 지정된 인덱스로 변환됨\n",
+    "return": "Integer"
+  },
+  {
+    "title": "CUBE_DIFFUSE",
+    "code": "CONST",
+    "description": "\n- 큐브 텍스쳐 인덱스\n",
+    "return": "Integer"
+  },
+  {
+    "title": "CUBE_REFLECTION",
+    "code": "CONST",
+    "description": "\n- 큐브 텍스쳐 인덱스\n",
+    "return": "Integer"
+  },
+  {
+    "title": "CUBE_REFRACTION",
+    "code": "CONST",
+    "description": "\n- 큐브 텍스쳐 인덱스\n",
+    "return": "Integer"
+  },
+  {
+    "title": "DIFFUSE",
+    "code": "CONST",
+    "description": "\n- 디퓨즈 텍스쳐 인덱스\n- 텍스쳐 생성지 지정하지않을경우 기본 디퓨즈로 인식함\n",
+    "return": "Integer"
+  },
+  {
+    "title": "DISPLACEMENT",
+    "code": "CONST",
+    "description": "\n- DISPLACEMENT 텍스쳐 인덱스\n",
+    "return": "Integer"
+  },
+  {
+    "title": "NORMAL",
+    "code": "CONST",
+    "description": "\n- 노멀 텍스쳐 인덱스\n",
+    "return": "Integer"
+  },
+  {
+    "constructorYn": true,
+    "title": "RedTextureIndex",
+    "description": "\n- 텍스쳐 고유인덱스\n",
+    "example": "\nRedTextureIndex.DIFFUSE\nRedTextureIndex.NORMAL\nRedTextureIndex.CUBE\n",
+    "return": "Integer"
+  },
+  {
+    "title": "SPECULAR",
+    "code": "CONST",
+    "description": "\n- SPECULAR 텍스쳐 인덱스\n",
+    "return": "Integer"
+  }
+]
