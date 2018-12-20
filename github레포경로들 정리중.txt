@@ -18,3 +18,4 @@ https://github.com/jbouny/fft-ocean
 https://github.com/toji/webgl-texture-utils
 https://github.com/garsaud/NoMath.js
 https://github.com/nlra/fmath.js
+https://github.com/jhnsnc/recurve-js
