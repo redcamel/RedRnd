@@ -17,7 +17,7 @@
     ///////////////////////////////////////
     // 루프내에 두번 루프돌때
     i = 10000
-    console.time('루프내에 한번 루프돌떄')
+    console.time('루프내에 두번 루프돌떄')
     while (i--) {
         i2 = t0.length
         while (i2--) {
@@ -28,11 +28,11 @@
             1 + 1
         }
     }
-    console.timeEnd('루프내에 한번 루프돌떄')
+    console.timeEnd('루프내에 두번 루프돌떄')
     ///////////////////////////////////////
     // 루프내에 한번 루프돌떄
     i = 10000
-    console.time('루프내에 두번 루프돌때')
+    console.time('루프내에 한번 루프돌때')
     while (i--) {
         i2 = t0.length
         i3 = t1.length
@@ -42,7 +42,7 @@
             if (t1[i2]) 1 + 1
         }
     }
-    console.timeEnd('루프내에 두번 루프돌때')
+    console.timeEnd('루프내에 한번 루프돌때')
 </script>
 <script>
     document.body.innerText = document.getElementById('code').innerHTML
