@@ -14,7 +14,7 @@
     var i0, i1;
     var t0 = [];
     var t1 = [];
-    i=100
+    i = 100
     while (i--) {
         t0[i] = i + 1; // 100개 넣어둠
         t1[i] = i + 1; // 100개 넣어둠
@@ -32,8 +32,8 @@
             i1 = t1.length
             if (i1 > i0) i0 = i1
             while (i0--) {
-                if (t0[i0]) loopNum++
-                if (t1[i0]) loopNum++
+                if (t0[i0]) Math.sin(loopNum++)
+                if (t1[i0]) Math.sin(loopNum++)
             }
         }
         console.timeEnd('루프내에 한번 루프돌때')
@@ -45,11 +45,11 @@
         while (i--) {
             i0 = t0.length
             while (i0--) {
-                if (t0[i0]) loopNum++
+                if (t0[i0]) Math.sin(loopNum++)
             }
             i1 = t1.length
             while (i1--) {
-                if (t1[i1]) loopNum++
+                if (t1[i1]) Math.sin(loopNum++)
             }
         }
         console.timeEnd('루프내에 두번 루프돌떄')
