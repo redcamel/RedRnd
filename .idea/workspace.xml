@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e82eaa9-036d-44a4-a0e8-6d19b1c851b1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2019/loopTest/loopTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/2019/loopTest/loopTest.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2019/loopTest/loopTest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="55">
+              <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -145,7 +146,7 @@
       <workItem from="1545284002831" duration="921000" />
       <workItem from="1545351554241" duration="1150000" />
       <workItem from="1545387173884" duration="20000" />
-      <workItem from="1557735776267" duration="3718000" />
+      <workItem from="1557735776267" duration="3954000" />
     </task>
     <task id="LOCAL-00001" summary="레포정리">
       <created>1545279862486</created>
@@ -182,11 +183,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557739491979</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="어허..">
+      <created>1557739524264</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1557739524264</updated>
+    </task>
+    <task id="LOCAL-00007" summary="어허..">
+      <created>1557739595668</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1557739595668</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10051000" />
+    <option name="totallyTimeSpent" value="10287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -287,8 +302,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2019/loopTest/loopTest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="55">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
         </state>
       </provider>
     </entry>
