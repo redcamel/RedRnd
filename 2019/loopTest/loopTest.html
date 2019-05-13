@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script id="code">
+    var i = 10000
+    var i2, i3;
+    var t0 = [];
+    var t1 = [];
+    while (i--) {
+        t0[i] = i; // 10000개 넣어둠
+        t1[i] = i; // 10000개 넣어둠
+    }
+    ///////////////////////////////////////
+    // 루프내에 두번 루프돌때
+    i = 10000
+    console.time('루프내에 한번 루프돌떄')
+    while (i--) {
+        i2 = t0.length
+        while (i2--) {
+            1 + 1
+        }
+        i3 = t1.length
+        while (i3--) {
+            1 + 1
+        }
+    }
+    console.timeEnd('루프내에 한번 루프돌떄')
+    ///////////////////////////////////////
+    // 루프내에 한번 루프돌떄
+    i = 10000
+    console.time('루프내에 두번 루프돌때')
+    while (i--) {
+        i2 = t0.length
+        i3 = t1.length
+        if (i3 > i2) i2 = i3
+        while (i2--) {
+            if (t0[i2]) 1 + 1
+            if (t1[i2]) 1 + 1
+        }
+    }
+    console.timeEnd('루프내에 두번 루프돌때')
+</script>
+<script>
+    document.body.innerText = document.getElementById('code').innerHTML
+</script>
+
+</body>
+</html>
